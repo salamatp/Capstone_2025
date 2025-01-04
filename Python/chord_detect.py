@@ -57,9 +57,9 @@ def capture_audio(duration, sampling_rate):
 
     return samples
 
-
+'''
 #testing
-def capture_audio_new(duration, sampling_rate):
+def capture_audio_old_2(duration, sampling_rate):
     num_samples = int(duration * sampling_rate)
     samples = np.zeros(num_samples)
     start_time = time.time()
@@ -80,7 +80,7 @@ def capture_audio_new(duration, sampling_rate):
 # Capture audio data
 #Issues: time.sleep(interval) is fixed, which doesnt consider the fact that it takes time for ADC to read the data and process the sample. This causes drift in timing for sample collection
 #Because of that the samplig rate might be higher that expected. 
-def capture_audio_old(duration, sampling_rate):
+def capture_audio_old_1(duration, sampling_rate):
     samples = []
     start_time = time.time()
     interval = 1.0 / sampling_rate
@@ -96,7 +96,7 @@ def capture_audio_old(duration, sampling_rate):
     print(f"Actual Sampling Rate: {actual_sampling_rate} Hz")
 
     return np.array(samples)
-
+'''
 
 def write_audio(audio, sampling_rate):
     #127.5 is chosen to avoide the values exceeding the range due to rounding (255)
