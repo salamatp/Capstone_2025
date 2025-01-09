@@ -117,7 +117,7 @@ String frequency_2_note(float frequency)
     int midi_number = (int)(round(12 * log2(frequency / A4_freq) + A4_note));
 
     // Map MIDI number to note names
-    String note_names[12] = {"C", "C", "D", "D", "E", "F", "F", "G", "G", "A", "A", "B"};
+    String note_names[12] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
     uint8_t note_index = (midi_number) % 12; // Modulo 12 for the note names
     String note = note_names[note_index];
     return note;
