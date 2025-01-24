@@ -4,7 +4,7 @@
 # compile ASM with /usr/bin/arm-none-eabi-gcc
 ASM_DEFINES = 
 
-ASM_INCLUDES = 
+ASM_INCLUDES = -I/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Include
 
 ASM_FLAGS = -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG
 

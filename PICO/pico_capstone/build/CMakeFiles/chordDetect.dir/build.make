@@ -994,6 +994,7 @@ chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-s
 chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 chordDetect.elf: CMakeFiles/chordDetect.dir/build.make
 chordDetect.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
+chordDetect.elf: libcmsis_dsp.a
 chordDetect.elf: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 chordDetect.elf: CMakeFiles/chordDetect.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking CXX executable chordDetect.elf"

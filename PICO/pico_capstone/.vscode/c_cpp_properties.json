@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/home/arnur/Capstone_2025/PICO/Libraries/CMSIS_5/**",
-                "/home/arnur/Capstone_2025/PICO/Libraries/pico-sdk/**"
+                "/home/arnur/Capstone_2025/PICO/Libraries/pico-sdk/**", 
+                "/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/**"
             ],
             "defines": [],
             "cStandard": "c17",

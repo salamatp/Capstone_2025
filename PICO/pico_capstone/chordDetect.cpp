@@ -6,28 +6,58 @@
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/timer.h"
+#include "arm_math.h"
 
-
-// #define onboard 5
-// #define slaveSelect 10 //none-sec pin which select ADC
-// #define mic_pin A5
-// #define SAMPLES 128              //Must be a power of 2
-// #define SAMPLING_FREQUENCY 1000 //Hz, must be less than 10000 due to ADC
-
+/////////////////////////////////////
 #define SAMPLES 128                // Must be a power of 2
 #define SAMPLING_FREQUENCY 1000    // Hz
 #define SPI_PORT spi0              // Use SPI0
 #define SPI_CLK 1 * 1000 * 1000    // 1 MHz SPI clock
-#define SPI_MISO 4                // GPIO for SPI MISO
-#define SPI_MOSI 3                // GPIO for SPI MOSI
-#define SPI_SCK 2                 // GPIO for SPI SCK
-#define SPI_CS 5                  // GPIO for SPI CS
+#define SPI_MISO 4                 // GPIO for SPI MISO
+#define SPI_MOSI 3                 // GPIO for SPI MOSI
+#define SPI_SCK 2                  // GPIO for SPI SCK
+#define SPI_CS 5                   // GPIO for SPI CS
+/////////////////////////////////////
+// Define the number of FFT points (e.g., 1024)
+#define FFT_SIZE 1024
 
 
-/////  GLOBAL VARIABLES ///////////
-///////////////////////////////////
+// Declare input and output arrays for the FFT
+float32_t input[FFT_SIZE];    // Input data (real part)
+float32_t output[FFT_SIZE];   // Output data (complex in interleaved format)
+// Declare the FFT instance
+arm_cfft_instance_f32 fft_inst;
+void init_input_data() {
+    for (int i = 0; i < FFT_SIZE; i++) {
+        input[i] = (float32_t)(sin(2 * M_PI * i / FFT_SIZE));  // Example: a sine wave signal
+    }
+}
+int main() {
+    // Initialize the standard input/output
+    stdio_init_all();
+
+    // Initialize input data
+    init_input_data();
+
+    // Initialize the FFT instance for a real FFT (complex FFT)
+    arm_cfft_init_f32(&fft_inst, FFT_SIZE);
+
+    // Copy the input data to the output array (CMSIS-DSP operates on the same array)
+    memcpy(output, input, FFT_SIZE * sizeof(float32_t));
+
+    // Perform the FFT
+    arm_cfft_f32(&fft_inst, output, 0, 1);
+
+    // Print the FFT results (real and imaginary parts)
+    for (int i = 0; i < FFT_SIZE; i++) {
+        printf("Output[%d]: %f\n", i, output[i]);
+    }
+
+    return 0;
+}
 
 void spi_init_custom() {
+    printf("Starting SPI initilazation\n");
     spi_init(SPI_PORT, SPI_CLK); // 1 MHz
     gpio_set_function(SPI_SCK, GPIO_FUNC_SPI);
     gpio_set_function(SPI_MOSI, GPIO_FUNC_SPI);
@@ -35,8 +65,11 @@ void spi_init_custom() {
     gpio_init(SPI_CS);
     gpio_set_dir(SPI_CS, GPIO_OUT);
     gpio_put(SPI_CS, 1); // Deselect the chip
+    printf("---------------\n");
+    printf("Initialized SPI\n");
 }
-uint8_t read_adc(uint8_t channel) {
+
+uint16_t read_adc(uint8_t channel) {
     if (channel > 7) return 0; // MCP3008 supports only 8 channels (0-7)
 
     uint8_t tx_data[3];
@@ -53,16 +86,17 @@ uint8_t read_adc(uint8_t channel) {
 
     // Combine the result from rx_data (10-bit result is in bits 1-10 of the response)
     uint16_t result_int = ((rx_data[1] & 0x03) << 8) | rx_data[2];
-    uint16_t result_final = result_int >> 8;
+    uint16_t result_final = result_int >> 2;
     uint8_t result = result_final;
-    return result;
+    // printf("result_int: %d\n",   result_int); 
+    // printf("result_final: %d\n", result_final); 
+    // printf("result: %d\n",       result);  
+    return result_int;
 }
 
 
-
-
-void capture_audio(uint16_t num_samples, uint16_t sampling_rate, uint8_t* samples) {
-
+void capture_audio(uint16_t num_samples, uint16_t sampling_rate, uint16_t* samples) {
+    printf("Starting audio capture\n");
     // Record the start time for the capture
     uint32_t start_time = time_us_32();  // Start time in seconds
     
@@ -92,26 +126,63 @@ void capture_audio(uint16_t num_samples, uint16_t sampling_rate, uint8_t* sample
       // If there's still time left until the next sample, sleep for the remaining time
       if (sleep_time > 0) sleep_us(sleep_time);
     }
+    printf("End of audio capture\n");
 }
 
+// // CMSIS-DSP buffers and FFT instance
+// float32_t fft_input[SAMPLES];
+// float32_t fft_output[SAMPLES];
+// float32_t freqs[SAMPLES / 2];
+// float32_t fft_mags[SAMPLES / 2];
+// arm_rfft_fast_instance_f32 fft_instance;
+
+// void doFFT() {
+//     for (size_t i = 0; i < SAMPLES; i++) {
+//         int adc_value = readADC(0);  // Read from channel 0
+//         fft_input[i] = static_cast<float32_t>(adc_value); // Store as float32_t
+//         sleep_us(1000000 / SAMPLING_FREQUENCY);
+//     }
+
+//     // Initialize CMSIS-DSP FFT instance (done once)
+//     arm_rfft_fast_init_f32(&fft_instance, SAMPLES);
+
+//     // Perform the FFT
+//     arm_rfft_fast_f32(&fft_instance, fft_input, fft_output, 0);
+
+//     // Compute magnitude and frequencies for the FFT output
+//     for (size_t i = 0; i < SAMPLES / 2; i++) {
+//         float32_t real = fft_output[2 * i];
+//         float32_t imag = fft_output[2 * i + 1];
+//         fft_mags[i] = sqrtf(real * real + imag * imag); // Magnitude
+//         freqs[i] = (i * 1.0f * SAMPLING_FREQUENCY) / SAMPLES;
+//     }
+// }
+
+
+
 void run() {
+  printf("Lets start");
   stdio_init_all();
   spi_init_custom();
 
   uint16_t sampling_rate = 9000;
-  float sampling_rate_us = (float)sampling_rate / 1000000; // in us
-  int duration = 10e6; // in us
-  uint16_t num_samples = duration * sampling_rate_us;
-  uint8_t samples[num_samples];
-  printf("num_samples: %d\n", num_samples);
+  float sampling_rate_us = (float)(sampling_rate) / 1000000.0; // in us
+  int duration = 1e6; // in us
+  uint16_t num_samples = (uint16_t)(duration * sampling_rate_us);
+  uint16_t samples[num_samples];
+  
+  printf("sampling rate: %u\n", sampling_rate); // 9000 
+  printf("sampling_rate_us rate: %f\n", sampling_rate_us); //0.009
+  printf("duration: %d\n", duration); //10000000
+  printf("num_samples =%u\n", num_samples); //0.00000z
   
   capture_audio(num_samples, sampling_rate, samples);
-  for(uint8_t i = 0; i < num_samples; i++){
+  
+
+  for(uint8_t i = 0; i < 50; i++){
     printf("ADC Value: %d\n", samples[i]);
   }
 }
-
-
 
 
 int main(){
@@ -306,3 +377,14 @@ int main(){
 //   }
 //   return 0;
 // }
+
+
+// #define onboard 5
+// #define slaveSelect 10 //none-sec pin which select ADC
+// #define mic_pin A5
+// #define SAMPLES 128              //Must be a power of 2
+// #define SAMPLING_FREQUENCY 1000 //Hz, must be less than 10000 due to ADC
+
+
+
+/////  GLOBAL VARIABLES /////////

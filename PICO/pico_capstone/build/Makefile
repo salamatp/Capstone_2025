@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cmsis_dsp
+
+# Build rule for target.
+cmsis_dsp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmsis_dsp
+.PHONY : cmsis_dsp
+
+# fast build rule for target.
+cmsis_dsp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/build
+.PHONY : cmsis_dsp/fast
+
+#=============================================================================
 # Target rules for targets named chordDetect
 
 # Build rule for target.
@@ -128,32 +141,6 @@ chordDetect: cmake_check_build_system
 chordDetect/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chordDetect.dir/build.make CMakeFiles/chordDetect.dir/build
 .PHONY : chordDetect/fast
-
-#=============================================================================
-# Target rules for targets named picotoolForceReconfigure
-
-# Build rule for target.
-picotoolForceReconfigure: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
-.PHONY : picotoolForceReconfigure
-
-# fast build rule for target.
-picotoolForceReconfigure/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotoolForceReconfigure.dir/build.make CMakeFiles/picotoolForceReconfigure.dir/build
-.PHONY : picotoolForceReconfigure/fast
-
-#=============================================================================
-# Target rules for targets named picotoolBuild
-
-# Build rule for target.
-picotoolBuild: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
-.PHONY : picotoolBuild
-
-# fast build rule for target.
-picotoolBuild/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotoolBuild.dir/build.make CMakeFiles/picotoolBuild.dir/build
-.PHONY : picotoolBuild/fast
 
 #=============================================================================
 # Target rules for targets named bs2_default
@@ -217,6 +204,1470 @@ chordDetect.s: chordDetect.cpp.s
 chordDetect.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chordDetect.dir/build.make CMakeFiles/chordDetect.dir/chordDetect.cpp.s
 .PHONY : chordDetect.cpp.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.o: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.i: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.s: home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cmsis_dsp.dir/build.make CMakeFiles/cmsis_dsp.dir/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c.s
 
 home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.o: home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.o
@@ -1419,14 +2870,196 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
-	@echo "... picotoolBuild"
-	@echo "... picotoolForceReconfigure"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
 	@echo "... chordDetect"
+	@echo "... cmsis_dsp"
 	@echo "... chordDetect.o"
 	@echo "... chordDetect.i"
 	@echo "... chordDetect.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTables.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/CommonTablesF16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_common_tables_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_const_structs_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_mve_tables_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/CommonTables/arm_neon_tables_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctions.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/TransformFunctionsF16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal2.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_bitreversal_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_f64.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_f64.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_init_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_init_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix2_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_init_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix4_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_cfft_radix8_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_init_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_mfcc_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_f64.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f16.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f32.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_fast_init_f64.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_init_q31.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q15.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.s"
 	@echo "... home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.o"
 	@echo "... home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.s"
