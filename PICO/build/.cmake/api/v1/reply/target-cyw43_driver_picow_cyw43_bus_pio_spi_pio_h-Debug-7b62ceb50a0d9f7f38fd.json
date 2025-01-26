@@ -1,0 +1,114 @@
+{
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"pico_generate_pio_header",
+			"add_dependencies",
+			"find_package",
+			"pico_init_pioasm"
+		],
+		"files" : 
+		[
+			"tools/CMakeLists.txt",
+			"src/rp2_common/pico_cyw43_driver/CMakeLists.txt",
+			"tools/Findpioasm.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 50,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 182,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 159,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 91,
+				"parent" : 3
+			},
+			{
+				"file" : 2,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 51,
+				"parent" : 5
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 6,
+			"id" : "pioasmBuild::@bdbc77d97c2c683c63fb"
+		}
+	],
+	"id" : "cyw43_driver_picow_cyw43_bus_pio_spi_pio_h::@bdbc77d97c2c683c63fb",
+	"name" : "cyw43_driver_picow_cyw43_bus_pio_spi_pio_h",
+	"paths" : 
+	{
+		"build" : "src/rp2_common/pico_cyw43_driver",
+		"source" : "src/rp2_common/pico_cyw43_driver"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"isGenerated" : true,
+			"path" : "/home/arnur/Capstone_2025/PICO/build/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/arnur/Capstone_2025/PICO/build/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/arnur/Capstone_2025/PICO/build/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.pio.h.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

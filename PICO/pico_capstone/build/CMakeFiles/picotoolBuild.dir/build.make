@@ -82,6 +82,9 @@ CMakeFiles/picotoolBuild-complete: picotool/src/picotoolBuild-stamp/picotoolBuil
 	/usr/bin/cmake -E touch /home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/picotoolBuild-complete
 	/usr/bin/cmake -E touch /home/arnur/Capstone_2025/PICO/pico_capstone/build/picotool/src/picotoolBuild-stamp/picotoolBuild-done
 
+picotool/src/picotoolBuild-stamp/picotoolBuild-build:
+.PHONY : picotool/src/picotoolBuild-stamp/picotoolBuild-build
+
 picotool/src/picotoolBuild-stamp/picotoolBuild-build: picotool/src/picotoolBuild-stamp/picotoolBuild-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'picotoolBuild'"
 	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && $(MAKE)
@@ -101,6 +104,9 @@ picotool/src/picotoolBuild-stamp/picotoolBuild-install: picotool/src/picotoolBui
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'picotoolBuild'"
 	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && $(MAKE) install
 	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && /usr/bin/cmake -E touch /home/arnur/Capstone_2025/PICO/pico_capstone/build/picotool/src/picotoolBuild-stamp/picotoolBuild-install
+
+picotool/src/picotoolBuild-stamp/picotoolBuild-build:
+.PHONY : picotool/src/picotoolBuild-stamp/picotoolBuild-build
 
 picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'picotoolBuild'"

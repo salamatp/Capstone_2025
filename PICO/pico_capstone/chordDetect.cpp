@@ -6,7 +6,7 @@
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/timer.h"
-#include "arm_math.h"
+#include "kiss_fftr.h"
 
 /////////////////////////////////////
 #define SAMPLES 128                // Must be a power of 2
@@ -18,43 +18,9 @@
 #define SPI_SCK 2                  // GPIO for SPI SCK
 #define SPI_CS 5                   // GPIO for SPI CS
 /////////////////////////////////////
-// Define the number of FFT points (e.g., 1024)
-#define FFT_SIZE 1024
 
-
-// Declare input and output arrays for the FFT
-float32_t input[FFT_SIZE];    // Input data (real part)
-float32_t output[FFT_SIZE];   // Output data (complex in interleaved format)
-// Declare the FFT instance
-arm_cfft_instance_f32 fft_inst;
-void init_input_data() {
-    for (int i = 0; i < FFT_SIZE; i++) {
-        input[i] = (float32_t)(sin(2 * M_PI * i / FFT_SIZE));  // Example: a sine wave signal
-    }
-}
-int main() {
-    // Initialize the standard input/output
-    stdio_init_all();
-
-    // Initialize input data
-    init_input_data();
-
-    // Initialize the FFT instance for a real FFT (complex FFT)
-    arm_cfft_init_f32(&fft_inst, FFT_SIZE);
-
-    // Copy the input data to the output array (CMSIS-DSP operates on the same array)
-    memcpy(output, input, FFT_SIZE * sizeof(float32_t));
-
-    // Perform the FFT
-    arm_cfft_f32(&fft_inst, output, 0, 1);
-
-    // Print the FFT results (real and imaginary parts)
-    for (int i = 0; i < FFT_SIZE; i++) {
-        printf("Output[%d]: %f\n", i, output[i]);
-    }
-
-    return 0;
-}
+#define N 1024  // Size of the FFT
+#define SAMPLE_RATE 44100  // Sampling rate, for example
 
 void spi_init_custom() {
     printf("Starting SPI initilazation\n");
@@ -129,35 +95,6 @@ void capture_audio(uint16_t num_samples, uint16_t sampling_rate, uint16_t* sampl
     printf("End of audio capture\n");
 }
 
-// // CMSIS-DSP buffers and FFT instance
-// float32_t fft_input[SAMPLES];
-// float32_t fft_output[SAMPLES];
-// float32_t freqs[SAMPLES / 2];
-// float32_t fft_mags[SAMPLES / 2];
-// arm_rfft_fast_instance_f32 fft_instance;
-
-// void doFFT() {
-//     for (size_t i = 0; i < SAMPLES; i++) {
-//         int adc_value = readADC(0);  // Read from channel 0
-//         fft_input[i] = static_cast<float32_t>(adc_value); // Store as float32_t
-//         sleep_us(1000000 / SAMPLING_FREQUENCY);
-//     }
-
-//     // Initialize CMSIS-DSP FFT instance (done once)
-//     arm_rfft_fast_init_f32(&fft_instance, SAMPLES);
-
-//     // Perform the FFT
-//     arm_rfft_fast_f32(&fft_instance, fft_input, fft_output, 0);
-
-//     // Compute magnitude and frequencies for the FFT output
-//     for (size_t i = 0; i < SAMPLES / 2; i++) {
-//         float32_t real = fft_output[2 * i];
-//         float32_t imag = fft_output[2 * i + 1];
-//         fft_mags[i] = sqrtf(real * real + imag * imag); // Magnitude
-//         freqs[i] = (i * 1.0f * SAMPLING_FREQUENCY) / SAMPLES;
-//     }
-// }
-
 
 
 void run() {
@@ -184,15 +121,51 @@ void run() {
   }
 }
 
+// kiss_fft_cpx in[N], out[N];
+
+// void setup_fft() {
+//     // Fill your input data (e.g., audio samples) into the `in` array
+
+//     // Call the FFT function
+//     kiss_fft_cfg cfg = kiss_fft_alloc(N, 0, NULL, NULL);  // N is the FFT size
+//     kiss_fft(cfg, in, out);  // Perform the FFT
+    
+//     // `out` contains the frequency bins now
+    
+//     // Free the FFT config
+//     free(cfg);
+// }
+
+void fft(uint16_t* input, uint16_t num_samples, kiss_fft_cpx* output) {
+   // Create an array for the real input data (convert uint16_t to float)
+    float* input_data = new float[num_samples];
+    for (size_t i = 0; i < num_samples; i++) {
+        input_data[i] = static_cast<float>(input[i]);
+    }
+    // Set up the FFT configuration for real-to-complex FFT
+    kiss_fftr_cfg cfg = kiss_fftr_alloc(num_samples, 0, nullptr, nullptr);  // 0 means forward FFT
+
+    // Perform the FFT (output will be stored in the `output` array)
+    kiss_fftr(cfg, input_data, output);
+
+    // Free the memory allocated for input_data
+    delete[] input_data;
+
+    // Free the kissfft configuration
+    kiss_fftr_free(cfg);
+}
+
 
 int main(){
     spi_init_custom();
     stdio_init_all();
-    while (true) {
-        run();
-        printf("=====================================\n");
-        sleep_ms(5000);
-    }
+    //fft();
+
+    // while (true) {
+    //     run();
+    //     printf("=====================================\n");
+    //     sleep_ms(5000);
+    // }
     return 0;
 }
 

@@ -247,7 +247,113 @@ lib/preinstall:
 # Recursive "clean" directory target.
 lib/clean: lib/nlohmann_json/clean
 lib/clean: lib/whereami/clean
+lib/clean: lib/mbedtls/clean
 .PHONY : lib/clean
+
+#=============================================================================
+# Directory level rules for directory lib/mbedtls
+
+# Recursive "all" directory target.
+lib/mbedtls/all: lib/mbedtls/include/all
+lib/mbedtls/all: lib/mbedtls/3rdparty/all
+lib/mbedtls/all: lib/mbedtls/library/all
+lib/mbedtls/all: lib/mbedtls/pkgconfig/all
+.PHONY : lib/mbedtls/all
+
+# Recursive "preinstall" directory target.
+lib/mbedtls/preinstall: lib/mbedtls/include/preinstall
+lib/mbedtls/preinstall: lib/mbedtls/3rdparty/preinstall
+lib/mbedtls/preinstall: lib/mbedtls/library/preinstall
+lib/mbedtls/preinstall: lib/mbedtls/pkgconfig/preinstall
+.PHONY : lib/mbedtls/preinstall
+
+# Recursive "clean" directory target.
+lib/mbedtls/clean: lib/mbedtls/CMakeFiles/apidoc.dir/clean
+lib/mbedtls/clean: lib/mbedtls/include/clean
+lib/mbedtls/clean: lib/mbedtls/3rdparty/clean
+lib/mbedtls/clean: lib/mbedtls/library/clean
+lib/mbedtls/clean: lib/mbedtls/pkgconfig/clean
+.PHONY : lib/mbedtls/clean
+
+#=============================================================================
+# Directory level rules for directory lib/mbedtls/3rdparty
+
+# Recursive "all" directory target.
+lib/mbedtls/3rdparty/all: lib/mbedtls/3rdparty/everest/all
+.PHONY : lib/mbedtls/3rdparty/all
+
+# Recursive "preinstall" directory target.
+lib/mbedtls/3rdparty/preinstall: lib/mbedtls/3rdparty/everest/preinstall
+.PHONY : lib/mbedtls/3rdparty/preinstall
+
+# Recursive "clean" directory target.
+lib/mbedtls/3rdparty/clean: lib/mbedtls/3rdparty/everest/clean
+.PHONY : lib/mbedtls/3rdparty/clean
+
+#=============================================================================
+# Directory level rules for directory lib/mbedtls/3rdparty/everest
+
+# Recursive "all" directory target.
+lib/mbedtls/3rdparty/everest/all:
+.PHONY : lib/mbedtls/3rdparty/everest/all
+
+# Recursive "preinstall" directory target.
+lib/mbedtls/3rdparty/everest/preinstall:
+.PHONY : lib/mbedtls/3rdparty/everest/preinstall
+
+# Recursive "clean" directory target.
+lib/mbedtls/3rdparty/everest/clean:
+.PHONY : lib/mbedtls/3rdparty/everest/clean
+
+#=============================================================================
+# Directory level rules for directory lib/mbedtls/include
+
+# Recursive "all" directory target.
+lib/mbedtls/include/all:
+.PHONY : lib/mbedtls/include/all
+
+# Recursive "preinstall" directory target.
+lib/mbedtls/include/preinstall:
+.PHONY : lib/mbedtls/include/preinstall
+
+# Recursive "clean" directory target.
+lib/mbedtls/include/clean:
+.PHONY : lib/mbedtls/include/clean
+
+#=============================================================================
+# Directory level rules for directory lib/mbedtls/library
+
+# Recursive "all" directory target.
+lib/mbedtls/library/all: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+lib/mbedtls/library/all: lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+lib/mbedtls/library/all: lib/mbedtls/library/CMakeFiles/mbedtls.dir/all
+.PHONY : lib/mbedtls/library/all
+
+# Recursive "preinstall" directory target.
+lib/mbedtls/library/preinstall:
+.PHONY : lib/mbedtls/library/preinstall
+
+# Recursive "clean" directory target.
+lib/mbedtls/library/clean: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/clean
+lib/mbedtls/library/clean: lib/mbedtls/library/CMakeFiles/mbedx509.dir/clean
+lib/mbedtls/library/clean: lib/mbedtls/library/CMakeFiles/mbedtls.dir/clean
+lib/mbedtls/library/clean: lib/mbedtls/library/CMakeFiles/lib.dir/clean
+.PHONY : lib/mbedtls/library/clean
+
+#=============================================================================
+# Directory level rules for directory lib/mbedtls/pkgconfig
+
+# Recursive "all" directory target.
+lib/mbedtls/pkgconfig/all:
+.PHONY : lib/mbedtls/pkgconfig/all
+
+# Recursive "preinstall" directory target.
+lib/mbedtls/pkgconfig/preinstall:
+.PHONY : lib/mbedtls/pkgconfig/preinstall
+
+# Recursive "clean" directory target.
+lib/mbedtls/pkgconfig/clean:
+.PHONY : lib/mbedtls/pkgconfig/clean
 
 #=============================================================================
 # Directory level rules for directory lib/nlohmann_json
@@ -346,12 +452,12 @@ picoboot_connection/clean:
 CMakeFiles/binary_data.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_data.dir/build.make CMakeFiles/binary_data.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_data.dir/build.make CMakeFiles/binary_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=1,2,3 "Built target binary_data"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=1,2 "Built target binary_data"
 .PHONY : CMakeFiles/binary_data.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/binary_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/binary_data.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
 .PHONY : CMakeFiles/binary_data.dir/rule
@@ -372,15 +478,18 @@ CMakeFiles/binary_data.dir/clean:
 CMakeFiles/picotool.dir/all: errors/CMakeFiles/errors.dir/all
 CMakeFiles/picotool.dir/all: elf/CMakeFiles/elf.dir/all
 CMakeFiles/picotool.dir/all: elf2uf2/CMakeFiles/elf2uf2.dir/all
+CMakeFiles/picotool.dir/all: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+CMakeFiles/picotool.dir/all: lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+CMakeFiles/picotool.dir/all: lib/mbedtls/library/CMakeFiles/mbedtls.dir/all
 CMakeFiles/picotool.dir/all: bintool/CMakeFiles/bintool.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotool.dir/build.make CMakeFiles/picotool.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotool.dir/build.make CMakeFiles/picotool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=12,13,14,15,16,17 "Built target picotool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=96,97,98,99,100 "Built target picotool"
 .PHONY : CMakeFiles/picotool.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/picotool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 98
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/picotool.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
 .PHONY : CMakeFiles/picotool.dir/rule
@@ -401,7 +510,7 @@ CMakeFiles/picotool.dir/clean:
 errors/CMakeFiles/errors.dir/all:
 	$(MAKE) $(MAKESILENT) -f errors/CMakeFiles/errors.dir/build.make errors/CMakeFiles/errors.dir/depend
 	$(MAKE) $(MAKESILENT) -f errors/CMakeFiles/errors.dir/build.make errors/CMakeFiles/errors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=10,11 "Built target errors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=9,10 "Built target errors"
 .PHONY : errors/CMakeFiles/errors.dir/all
 
 # Build rule for subdir invocation for target.
@@ -427,12 +536,12 @@ errors/CMakeFiles/errors.dir/clean:
 elf/CMakeFiles/elf.dir/all: errors/CMakeFiles/errors.dir/all
 	$(MAKE) $(MAKESILENT) -f elf/CMakeFiles/elf.dir/build.make elf/CMakeFiles/elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f elf/CMakeFiles/elf.dir/build.make elf/CMakeFiles/elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=6,7 "Built target elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=6 "Built target elf"
 .PHONY : elf/CMakeFiles/elf.dir/all
 
 # Build rule for subdir invocation for target.
 elf/CMakeFiles/elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 elf/CMakeFiles/elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
 .PHONY : elf/CMakeFiles/elf.dir/rule
@@ -454,12 +563,12 @@ elf2uf2/CMakeFiles/elf2uf2.dir/all: errors/CMakeFiles/errors.dir/all
 elf2uf2/CMakeFiles/elf2uf2.dir/all: elf/CMakeFiles/elf.dir/all
 	$(MAKE) $(MAKESILENT) -f elf2uf2/CMakeFiles/elf2uf2.dir/build.make elf2uf2/CMakeFiles/elf2uf2.dir/depend
 	$(MAKE) $(MAKESILENT) -f elf2uf2/CMakeFiles/elf2uf2.dir/build.make elf2uf2/CMakeFiles/elf2uf2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=8,9 "Built target elf2uf2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=7,8 "Built target elf2uf2"
 .PHONY : elf2uf2/CMakeFiles/elf2uf2.dir/all
 
 # Build rule for subdir invocation for target.
 elf2uf2/CMakeFiles/elf2uf2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 elf2uf2/CMakeFiles/elf2uf2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
 .PHONY : elf2uf2/CMakeFiles/elf2uf2.dir/rule
@@ -474,19 +583,155 @@ elf2uf2/CMakeFiles/elf2uf2.dir/clean:
 .PHONY : elf2uf2/CMakeFiles/elf2uf2.dir/clean
 
 #=============================================================================
+# Target rules for target lib/mbedtls/CMakeFiles/apidoc.dir
+
+# All Build rule for target.
+lib/mbedtls/CMakeFiles/apidoc.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/CMakeFiles/apidoc.dir/build.make lib/mbedtls/CMakeFiles/apidoc.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/CMakeFiles/apidoc.dir/build.make lib/mbedtls/CMakeFiles/apidoc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num= "Built target apidoc"
+.PHONY : lib/mbedtls/CMakeFiles/apidoc.dir/all
+
+# Build rule for subdir invocation for target.
+lib/mbedtls/CMakeFiles/apidoc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/mbedtls/CMakeFiles/apidoc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
+.PHONY : lib/mbedtls/CMakeFiles/apidoc.dir/rule
+
+# Convenience name for target.
+apidoc: lib/mbedtls/CMakeFiles/apidoc.dir/rule
+.PHONY : apidoc
+
+# clean rule for target.
+lib/mbedtls/CMakeFiles/apidoc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/CMakeFiles/apidoc.dir/build.make lib/mbedtls/CMakeFiles/apidoc.dir/clean
+.PHONY : lib/mbedtls/CMakeFiles/apidoc.dir/clean
+
+#=============================================================================
+# Target rules for target lib/mbedtls/library/CMakeFiles/mbedcrypto.dir
+
+# All Build rule for target.
+lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/build.make lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/build.make lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target mbedcrypto"
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+
+# Build rule for subdir invocation for target.
+lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 66
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/rule
+
+# Convenience name for target.
+mbedcrypto: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/rule
+.PHONY : mbedcrypto
+
+# clean rule for target.
+lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/build.make lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/clean
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/clean
+
+#=============================================================================
+# Target rules for target lib/mbedtls/library/CMakeFiles/mbedx509.dir
+
+# All Build rule for target.
+lib/mbedtls/library/CMakeFiles/mbedx509.dir/all: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedx509.dir/build.make lib/mbedtls/library/CMakeFiles/mbedx509.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedx509.dir/build.make lib/mbedtls/library/CMakeFiles/mbedx509.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=87,88,89,90,91,92,93,94,95 "Built target mbedx509"
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+
+# Build rule for subdir invocation for target.
+lib/mbedtls/library/CMakeFiles/mbedx509.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 75
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedx509.dir/rule
+
+# Convenience name for target.
+mbedx509: lib/mbedtls/library/CMakeFiles/mbedx509.dir/rule
+.PHONY : mbedx509
+
+# clean rule for target.
+lib/mbedtls/library/CMakeFiles/mbedx509.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedx509.dir/build.make lib/mbedtls/library/CMakeFiles/mbedx509.dir/clean
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedx509.dir/clean
+
+#=============================================================================
+# Target rules for target lib/mbedtls/library/CMakeFiles/mbedtls.dir
+
+# All Build rule for target.
+lib/mbedtls/library/CMakeFiles/mbedtls.dir/all: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+lib/mbedtls/library/CMakeFiles/mbedtls.dir/all: lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedtls.dir/build.make lib/mbedtls/library/CMakeFiles/mbedtls.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedtls.dir/build.make lib/mbedtls/library/CMakeFiles/mbedtls.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=77,78,79,80,81,82,83,84,85,86 "Built target mbedtls"
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedtls.dir/all
+
+# Build rule for subdir invocation for target.
+lib/mbedtls/library/CMakeFiles/mbedtls.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 85
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/mbedtls/library/CMakeFiles/mbedtls.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedtls.dir/rule
+
+# Convenience name for target.
+mbedtls: lib/mbedtls/library/CMakeFiles/mbedtls.dir/rule
+.PHONY : mbedtls
+
+# clean rule for target.
+lib/mbedtls/library/CMakeFiles/mbedtls.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/mbedtls.dir/build.make lib/mbedtls/library/CMakeFiles/mbedtls.dir/clean
+.PHONY : lib/mbedtls/library/CMakeFiles/mbedtls.dir/clean
+
+#=============================================================================
+# Target rules for target lib/mbedtls/library/CMakeFiles/lib.dir
+
+# All Build rule for target.
+lib/mbedtls/library/CMakeFiles/lib.dir/all: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+lib/mbedtls/library/CMakeFiles/lib.dir/all: lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+lib/mbedtls/library/CMakeFiles/lib.dir/all: lib/mbedtls/library/CMakeFiles/mbedtls.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/lib.dir/build.make lib/mbedtls/library/CMakeFiles/lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/lib.dir/build.make lib/mbedtls/library/CMakeFiles/lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num= "Built target lib"
+.PHONY : lib/mbedtls/library/CMakeFiles/lib.dir/all
+
+# Build rule for subdir invocation for target.
+lib/mbedtls/library/CMakeFiles/lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 85
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/mbedtls/library/CMakeFiles/lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
+.PHONY : lib/mbedtls/library/CMakeFiles/lib.dir/rule
+
+# Convenience name for target.
+lib: lib/mbedtls/library/CMakeFiles/lib.dir/rule
+.PHONY : lib
+
+# clean rule for target.
+lib/mbedtls/library/CMakeFiles/lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/mbedtls/library/CMakeFiles/lib.dir/build.make lib/mbedtls/library/CMakeFiles/lib.dir/clean
+.PHONY : lib/mbedtls/library/CMakeFiles/lib.dir/clean
+
+#=============================================================================
 # Target rules for target bintool/CMakeFiles/bintool.dir
 
 # All Build rule for target.
 bintool/CMakeFiles/bintool.dir/all: errors/CMakeFiles/errors.dir/all
 bintool/CMakeFiles/bintool.dir/all: elf/CMakeFiles/elf.dir/all
+bintool/CMakeFiles/bintool.dir/all: lib/mbedtls/library/CMakeFiles/mbedcrypto.dir/all
+bintool/CMakeFiles/bintool.dir/all: lib/mbedtls/library/CMakeFiles/mbedx509.dir/all
+bintool/CMakeFiles/bintool.dir/all: lib/mbedtls/library/CMakeFiles/mbedtls.dir/all
 	$(MAKE) $(MAKESILENT) -f bintool/CMakeFiles/bintool.dir/build.make bintool/CMakeFiles/bintool.dir/depend
 	$(MAKE) $(MAKESILENT) -f bintool/CMakeFiles/bintool.dir/build.make bintool/CMakeFiles/bintool.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=4,5 "Built target bintool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles --progress-num=3,4,5 "Built target bintool"
 .PHONY : bintool/CMakeFiles/bintool.dir/all
 
 # Build rule for subdir invocation for target.
 bintool/CMakeFiles/bintool.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 91
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bintool/CMakeFiles/bintool.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/CMakeFiles 0
 .PHONY : bintool/CMakeFiles/bintool.dir/rule

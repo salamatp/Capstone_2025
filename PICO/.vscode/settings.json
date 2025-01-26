@@ -1,0 +1,4 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/arm-none-eabi-gcc",
+    "cmake.sourceDirectory": "/home/arnur/Capstone_2025/PICO/pico-sdk"
+}

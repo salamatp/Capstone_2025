@@ -79,14 +79,29 @@ bintool/CMakeFiles/bintool.dir/bintool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bintool.dir/bintool.cpp.s"
 	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/bintool && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/bintool.cpp -o CMakeFiles/bintool.dir/bintool.cpp.s
 
+bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o: bintool/CMakeFiles/bintool.dir/flags.make
+bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o: /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/mbedtls_wrapper.c
+bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o: bintool/CMakeFiles/bintool.dir/compiler_depend.ts
+	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/bintool && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o -MF CMakeFiles/bintool.dir/mbedtls_wrapper.c.o.d -o CMakeFiles/bintool.dir/mbedtls_wrapper.c.o -c /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/mbedtls_wrapper.c
+
+bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bintool.dir/mbedtls_wrapper.c.i"
+	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/bintool && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/mbedtls_wrapper.c > CMakeFiles/bintool.dir/mbedtls_wrapper.c.i
+
+bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bintool.dir/mbedtls_wrapper.c.s"
+	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/bintool && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/mbedtls_wrapper.c -o CMakeFiles/bintool.dir/mbedtls_wrapper.c.s
+
 # Object files for target bintool
 bintool_OBJECTS = \
-"CMakeFiles/bintool.dir/bintool.cpp.o"
+"CMakeFiles/bintool.dir/bintool.cpp.o" \
+"CMakeFiles/bintool.dir/mbedtls_wrapper.c.o"
 
 # External object files for target bintool
 bintool_EXTERNAL_OBJECTS =
 
 bintool/libbintool.a: bintool/CMakeFiles/bintool.dir/bintool.cpp.o
+bintool/libbintool.a: bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o
 bintool/libbintool.a: bintool/CMakeFiles/bintool.dir/build.make
 bintool/libbintool.a: bintool/CMakeFiles/bintool.dir/link.txt
 	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build/bintool && $(CMAKE_COMMAND) -P CMakeFiles/bintool.dir/cmake_clean_target.cmake

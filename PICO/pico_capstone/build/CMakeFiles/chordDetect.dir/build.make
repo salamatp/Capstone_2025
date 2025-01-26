@@ -856,10 +856,360 @@ CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/chordDetect.dir/flags.make
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c > CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+
 CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/chordDetect.dir/flags.make
 CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c
 CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/chordDetect.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -MF CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o.d -o CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -c /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -929,6 +1279,31 @@ chordDetect_OBJECTS = \
 "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" \
 "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" \
 "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" \
+"CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
 "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
 
 # External object files for target chordDetect
@@ -991,13 +1366,38 @@ chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-s
 chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 chordDetect.elf: CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 chordDetect.elf: CMakeFiles/chordDetect.dir/build.make
 chordDetect.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-chordDetect.elf: libcmsis_dsp.a
+chordDetect.elf: libkissfft.a
 chordDetect.elf: /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 chordDetect.elf: CMakeFiles/chordDetect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Linking CXX executable chordDetect.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Linking CXX executable chordDetect.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chordDetect.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/arnur/Capstone_2025/PICO/pico_capstone/build/chordDetect.elf > chordDetect.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/arnur/Capstone_2025/PICO/pico_capstone/build/chordDetect.elf >> chordDetect.dis

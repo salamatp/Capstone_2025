@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "src/rp2_common/pico_standard_link",
+		"source" : "src/rp2_common/pico_standard_link"
+	}
+}

@@ -199,6 +199,30 @@ bintool.cpp.s:
 	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && $(MAKE) $(MAKESILENT) -f bintool/CMakeFiles/bintool.dir/build.make bintool/CMakeFiles/bintool.dir/bintool.cpp.s
 .PHONY : bintool.cpp.s
 
+mbedtls_wrapper.o: mbedtls_wrapper.c.o
+.PHONY : mbedtls_wrapper.o
+
+# target to build an object file
+mbedtls_wrapper.c.o:
+	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && $(MAKE) $(MAKESILENT) -f bintool/CMakeFiles/bintool.dir/build.make bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.o
+.PHONY : mbedtls_wrapper.c.o
+
+mbedtls_wrapper.i: mbedtls_wrapper.c.i
+.PHONY : mbedtls_wrapper.i
+
+# target to preprocess a source file
+mbedtls_wrapper.c.i:
+	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && $(MAKE) $(MAKESILENT) -f bintool/CMakeFiles/bintool.dir/build.make bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.i
+.PHONY : mbedtls_wrapper.c.i
+
+mbedtls_wrapper.s: mbedtls_wrapper.c.s
+.PHONY : mbedtls_wrapper.s
+
+# target to generate assembly for a file
+mbedtls_wrapper.c.s:
+	cd /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-build && $(MAKE) $(MAKESILENT) -f bintool/CMakeFiles/bintool.dir/build.make bintool/CMakeFiles/bintool.dir/mbedtls_wrapper.c.s
+.PHONY : mbedtls_wrapper.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,6 +239,9 @@ help:
 	@echo "... bintool.o"
 	@echo "... bintool.i"
 	@echo "... bintool.s"
+	@echo "... mbedtls_wrapper.o"
+	@echo "... mbedtls_wrapper.i"
+	@echo "... mbedtls_wrapper.s"
 .PHONY : help
 
 

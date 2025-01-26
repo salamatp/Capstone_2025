@@ -55,4 +55,5 @@ CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
- /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
+ /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+ /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h

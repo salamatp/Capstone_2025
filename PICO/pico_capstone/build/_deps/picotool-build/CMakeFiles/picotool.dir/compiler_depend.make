@@ -744,6 +744,32 @@ CMakeFiles/picotool.dir/main.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capstone
   /home/arnur/Capstone_2025/PICO/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot_constants.h \
   /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/elf/addresses.h \
   /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/bintool.h \
+  /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/mbedtls_wrapper.h \
+  /usr/include/c++/11/stdlib.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/sha256.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/config.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/check_config.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/ecdsa.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/ecp.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/bignum.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/md.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/platform_util.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/platform_time.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/ctr_drbg.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/aes.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/entropy.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/sha512.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/pk.h \
+  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/rsa.h \
   /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/elf/elf_file.h \
   /usr/include/c++/11/fstream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
@@ -1107,13 +1133,9 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 
 /usr/include/c++/11/bits/slice_array.h:
 
-/usr/include/c++/11/bits/valarray_before.h:
-
 /usr/include/c++/11/bits/valarray_array.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
@@ -1145,6 +1167,36 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 
 /usr/include/c++/11/fstream:
 
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/pk.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/entropy.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/platform_time.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/platform_util.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/md.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/ecdsa.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/c++/11/bits/valarray_before.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/check_config.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/config.h:
+
+/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/bintool/mbedtls_wrapper.h:
+
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/elf/elf.h:
 
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/elf/addresses.h:
@@ -1174,6 +1226,8 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 /usr/include/uchar.h:
 
 /usr/include/c++/11/bits/regex_executor.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/sha512.h:
 
 /usr/include/c++/11/bits/regex_compiler.h:
 
@@ -1309,6 +1363,8 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/bignum.h:
+
 /usr/include/c++/11/bits/localefwd.h:
 
 /usr/include/c++/11/regex:
@@ -1328,6 +1384,8 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/ctr_drbg.h:
 
 /usr/include/c++/11/backward/binders.h:
 
@@ -1362,6 +1420,8 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/sha256.h:
 
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/clipp/clipp.h:
 
@@ -1418,6 +1478,8 @@ CMakeFiles/picotool.dir/no_otp.cpp.o: /home/arnur/Capstone_2025/PICO/pico_capsto
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 data_locs.cpp:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/ecp.h:
 
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/main.cpp:
 
@@ -1517,6 +1579,8 @@ data_locs.cpp:
 
 /usr/include/linux/errno.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
 /usr/include/c++/11/debug/debug.h:
 
 /usr/include/features-time64.h:
@@ -1528,6 +1592,8 @@ data_locs.cpp:
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool-src/lib/nlohmann_json/single_include/nlohmann/json.hpp:
 
 /usr/include/c++/11/bits/exception_ptr.h:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/rsa.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -1605,7 +1671,11 @@ data_locs.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
 /usr/include/c++/11/string:
+
+/home/arnur/Capstone_2025/PICO/pico-sdk/lib/mbedtls/include/mbedtls/aes.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
 
@@ -1781,7 +1851,11 @@ data_locs.cpp:
 
 /usr/include/inttypes.h:
 
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
+
+/usr/include/limits.h:
 
 /usr/include/c++/11/bits/regex_compiler.tcc:
 

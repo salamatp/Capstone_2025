@@ -24,6 +24,9 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
+  "CFG_TUSB_DEBUG=0"
+  "CFG_TUSB_MCU=OPT_MCU_RP2040"
+  "CFG_TUSB_OS=OPT_OS_PICO"
   "LIB_BOOT_STAGE2_HEADERS=1"
   "LIB_PICO_ATOMIC=1"
   "LIB_PICO_BIT_OPS=1"
@@ -35,6 +38,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_DIVIDER_HARDWARE=1"
   "LIB_PICO_DOUBLE=1"
   "LIB_PICO_DOUBLE_PICO=1"
+  "LIB_PICO_FIX_RP2040_USB_DEVICE_ENUMERATION=1"
   "LIB_PICO_FLASH=1"
   "LIB_PICO_FLOAT=1"
   "LIB_PICO_FLOAT_PICO=1"
@@ -56,6 +60,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_STANDARD_LINK=1"
   "LIB_PICO_STDIO=1"
   "LIB_PICO_STDIO_UART=1"
+  "LIB_PICO_STDIO_USB=1"
   "LIB_PICO_STDLIB=1"
   "LIB_PICO_SYNC=1"
   "LIB_PICO_SYNC_CRITICAL_SECTION=1"
@@ -63,6 +68,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_SYNC_SEM=1"
   "LIB_PICO_TIME=1"
   "LIB_PICO_TIME_ADAPTER=1"
+  "LIB_PICO_UNIQUE_ID=1"
   "LIB_PICO_UTIL=1"
   "PICO_32BIT=1"
   "PICO_BOARD=\"pico\""
@@ -74,14 +80,17 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "PICO_NO_HARDWARE=0"
   "PICO_ON_DEVICE=1"
   "PICO_RP2040=1"
+  "PICO_RP2040_USB_DEVICE_UFRAME_FIX=1"
   "PICO_TARGET_NAME=\"chordDetect\""
   "PICO_USE_BLOCKED_RAM=0"
   )
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Include"
+  "../chordDetect"
+  "/home/arnur/Capstone_2025/PICO/Libraries/kissfft"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_atomic/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_stdlib_headers/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_base_headers/include"
@@ -128,16 +137,40 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_printf/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_usb_reset_interface_headers/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_multicore/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/boot_picobin_headers/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_int64_ops/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/boot_stage2/include"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/include"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/tusb.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/hardware_claim/claim.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync/critical_section.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync/critical_section.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync/critical_section.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync/lock_core.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync/lock_core.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync/lock_core.c.o.d"
@@ -151,6 +184,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/pico_platform/platform.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/pico_platform/platform.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/pico_platform/platform.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_irq/irq.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_irq/irq.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_pll/pll.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_pll/pll.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_pll/pll.c.o.d"
@@ -162,6 +196,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_uart/uart.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_uart/uart.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_uart/uart.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_vreg/vreg.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xosc/xosc.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_atomic/atomic.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o.d"
@@ -169,6 +204,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_double/double_math.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_double/double_math.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_flash/flash.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_flash/flash.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_float/float_math.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_float/float_math.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d"
@@ -182,14 +218,18 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio/stdio.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d"
   "/home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect.cpp" "CMakeFiles/chordDetect.dir/chordDetect.cpp.o" "gcc" "CMakeFiles/chordDetect.dir/chordDetect.cpp.o.d"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/cmsis_dsp.dir/DependInfo.cmake"
+  "/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/kissfft.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

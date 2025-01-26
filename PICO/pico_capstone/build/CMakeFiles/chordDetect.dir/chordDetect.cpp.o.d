@@ -162,6 +162,26 @@ CMakeFiles/chordDetect.dir/chordDetect.cpp.o: \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+ /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
- /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h
+ /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+ /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.h \
+ /usr/include/newlib/c++/10.3.1/math.h \
+ /usr/include/newlib/c++/10.3.1/cmath /usr/include/newlib/math.h \
+ /usr/include/newlib/c++/10.3.1/bits/specfun.h \
+ /usr/include/newlib/c++/10.3.1/limits \
+ /usr/include/newlib/c++/10.3.1/tr1/gamma.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/special_function_util.h \
+ /usr/include/newlib/c++/10.3.1/tr1/bessel_function.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/beta_function.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/ell_integral.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/exp_integral.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/hypergeometric.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/legendre_function.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/modified_bessel_func.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/poly_hermite.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/poly_laguerre.tcc \
+ /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc \
+ /usr/include/newlib/string.h /usr/include/newlib/strings.h \
+ /usr/include/newlib/sys/string.h

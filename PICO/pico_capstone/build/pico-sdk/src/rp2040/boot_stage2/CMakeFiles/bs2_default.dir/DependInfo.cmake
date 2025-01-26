@@ -25,7 +25,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "/home/arnur/Capstone_2025/PICO/Libraries/CMSIS-DSP/Include"
+  "/home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect"
+  "/home/arnur/Capstone_2025/PICO/Libraries/kissfft"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/boot_stage2/asminclude"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_regs/include"
   "/home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_base/include"
