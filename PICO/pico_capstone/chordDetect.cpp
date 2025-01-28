@@ -7,6 +7,8 @@
 #include "hardware/spi.h"
 #include "hardware/timer.h"
 #include "kiss_fftr.h"
+#include <cmath> // For sqrt and other math functions
+
 
 /////////////////////////////////////
 #define SAMPLES 128                // Must be a power of 2
@@ -92,9 +94,38 @@ void capture_audio(uint16_t num_samples, uint16_t sampling_rate, uint16_t* sampl
       // If there's still time left until the next sample, sleep for the remaining time
       if (sleep_time > 0) sleep_us(sleep_time);
     }
+    
     printf("End of audio capture\n");
 }
 
+
+///KISSFFT////////////////////////////////////////////////////////////////////////////
+
+void fft(uint16_t* input, kiss_fft_cpx* fft_out, uint16_t num_samples, float sampling_rate, float* magnitudes, float* frequencies, kiss_fftr_cfg cfg ) {
+    // Convert uint16_t input to float
+    float* input_data = new float[num_samples];
+    for (size_t i = 0; i < num_samples; i++) {
+        input_data[i] = static_cast<float>(input[i]);
+    }
+
+    // Perform the FFT
+    kiss_fftr(cfg, input_data, fft_out);
+
+    // Calculate magnitudes and frequencies for each FFT bin
+    for (size_t i = 0; i < num_samples / 2 + 1; i++) {
+        // Magnitude is the square root of the sum of squares of the real and imaginary parts
+        magnitudes[i] = std::sqrt(fft_out[i].r * fft_out[i].r + fft_out[i].i * fft_out[i].i);
+        
+        // Frequency corresponding to this bin
+        frequencies[i] = i * sampling_rate / num_samples;
+    }
+
+    // Clean up
+    delete[] input_data;
+    delete[] fft_out;
+
+}
+///KISSFFT////////////////////////////////////////////////////////////////////////////
 
 
 void run() {
@@ -108,64 +139,56 @@ void run() {
   uint16_t num_samples = (uint16_t)(duration * sampling_rate_us);
   uint16_t samples[num_samples];
   
-  printf("sampling rate: %u\n", sampling_rate); // 9000 
+  printf("sampling rate: %u Hz\n", sampling_rate); // 9000 
   printf("sampling_rate_us rate: %f\n", sampling_rate_us); //0.009
   printf("duration: %d\n", duration); //10000000
   printf("num_samples =%u\n", num_samples); //0.00000z
   
+  //capture input audio samples
   capture_audio(num_samples, sampling_rate, samples);
-  
 
-  for(uint8_t i = 0; i < 50; i++){
-    printf("ADC Value: %d\n", samples[i]);
+  kiss_fftr_cfg cfg = kiss_fftr_alloc(num_samples, 0, nullptr, nullptr);  // 0 means forward FFT
+  kiss_fft_cpx* fft_out = new kiss_fft_cpx[num_samples / 2 + 1];
+
+  ////////////////////////////FFT/////////////////////////////////////////////
+  // Prepare arrays for FFT results
+  float* magnitudes = new float[num_samples / 2 + 1];
+  float* frequencies = new float[num_samples / 2 + 1];
+
+  // Perform FFT
+  fft(samples, fft_out, num_samples, sampling_rate, magnitudes, frequencies, cfg);
+
+  // Printing the magnitudes and corresponding frequencies
+  printf("FFT Results:\n");
+  for (size_t i = 0; i < num_samples / 2 + 1; i++) {
+      printf("Frequency: %.2f Hz, Magnitude: %.2f\n", frequencies[i], magnitudes[i]);
   }
+  // Clean up
+  delete[] magnitudes;
+  delete[] frequencies;
+  ////////////////////////////FFT/////////////////////////////////////////////
+  printf("Done.\n");
+  kiss_fftr_free(cfg);
+
+/* 
+for(uint8_t i = 0; i < 50; i++){
+  printf("ADC Value: %d\n", samples[i]);
+}*/
+ 
 }
 
-// kiss_fft_cpx in[N], out[N];
-
-// void setup_fft() {
-//     // Fill your input data (e.g., audio samples) into the `in` array
-
-//     // Call the FFT function
-//     kiss_fft_cfg cfg = kiss_fft_alloc(N, 0, NULL, NULL);  // N is the FFT size
-//     kiss_fft(cfg, in, out);  // Perform the FFT
-    
-//     // `out` contains the frequency bins now
-    
-//     // Free the FFT config
-//     free(cfg);
-// }
-
-void fft(uint16_t* input, uint16_t num_samples, kiss_fft_cpx* output) {
-   // Create an array for the real input data (convert uint16_t to float)
-    float* input_data = new float[num_samples];
-    for (size_t i = 0; i < num_samples; i++) {
-        input_data[i] = static_cast<float>(input[i]);
-    }
-    // Set up the FFT configuration for real-to-complex FFT
-    kiss_fftr_cfg cfg = kiss_fftr_alloc(num_samples, 0, nullptr, nullptr);  // 0 means forward FFT
-
-    // Perform the FFT (output will be stored in the `output` array)
-    kiss_fftr(cfg, input_data, output);
-
-    // Free the memory allocated for input_data
-    delete[] input_data;
-
-    // Free the kissfft configuration
-    kiss_fftr_free(cfg);
-}
 
 
 int main(){
     spi_init_custom();
     stdio_init_all();
-    //fft();
-
-    // while (true) {
-    //     run();
-    //     printf("=====================================\n");
-    //     sleep_ms(5000);
-    // }
+    
+    while (true) {
+         run();
+         printf("=====================================\n");
+         sleep_ms(5000);
+    }
+    
     return 0;
 }
 

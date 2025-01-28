@@ -143,6 +143,32 @@ chordDetect/fast:
 .PHONY : chordDetect/fast
 
 #=============================================================================
+# Target rules for targets named picotoolForceReconfigure
+
+# Build rule for target.
+picotoolForceReconfigure: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolForceReconfigure
+.PHONY : picotoolForceReconfigure
+
+# fast build rule for target.
+picotoolForceReconfigure/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotoolForceReconfigure.dir/build.make CMakeFiles/picotoolForceReconfigure.dir/build
+.PHONY : picotoolForceReconfigure/fast
+
+#=============================================================================
+# Target rules for targets named picotoolBuild
+
+# Build rule for target.
+picotoolBuild: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 picotoolBuild
+.PHONY : picotoolBuild
+
+# fast build rule for target.
+picotoolBuild/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/picotoolBuild.dir/build.make CMakeFiles/picotoolBuild.dir/build
+.PHONY : picotoolBuild/fast
+
+#=============================================================================
 # Target rules for targets named bs2_default
 
 # Build rule for target.
@@ -254,6 +280,30 @@ home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.s: home/arnur/Capstone_
 home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kissfft.dir/build.make CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s
 .PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s
+
+home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.o: home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.o
+
+# target to build an object file
+home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kissfft.dir/build.make CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o
+
+home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.i: home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.i
+
+# target to preprocess a source file
+home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kissfft.dir/build.make CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i
+
+home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.s: home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.s
+
+# target to generate assembly for a file
+home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kissfft.dir/build.make CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s
+.PHONY : home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s
 
 home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
@@ -2057,6 +2107,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... picotoolBuild"
+	@echo "... picotoolForceReconfigure"
 	@echo "... pioasmBuild"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
@@ -2068,6 +2120,9 @@ help:
 	@echo "... home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.o"
 	@echo "... home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.i"
 	@echo "... home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.s"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.o"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.i"
+	@echo "... home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.s"
 	@echo "... home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

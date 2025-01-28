@@ -5,7 +5,16 @@ set(KISSFFT_PATH /home/arnur/Capstone_2025/PICO/Libraries/kissfft)
 include(pico_sdk_import.cmake)
 include_directories(chordDetect ${KISSFFT_PATH}/)
 
-add_library(kissfft STATIC /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c)
+
+add_library(kissfft STATIC 
+    ${KISSFFT_PATH}/kiss_fft.c
+    ${KISSFFT_PATH}/kiss_fftr.c
+    ${KISSFFT_PATH}/kiss_fft.h
+    ${KISSFFT_PATH}/kiss_fftr.h
+)
+set_target_properties(kissfft PROPERTIES LINKER_LANGUAGE C)
+target_include_directories(kissfft PUBLIC ${KISSFFT_PATH})
+
 
 set(KISSFFT_SRC
     ${KISSFFT_PATH}/kiss_fftr.c

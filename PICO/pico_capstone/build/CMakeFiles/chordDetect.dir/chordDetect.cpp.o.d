@@ -166,6 +166,7 @@ CMakeFiles/chordDetect.dir/chordDetect.cpp.o: \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+ /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.h \
  /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.h \
  /usr/include/newlib/c++/10.3.1/math.h \
  /usr/include/newlib/c++/10.3.1/cmath /usr/include/newlib/math.h \

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o"
   "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o.d"
+  "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o"
+  "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o.d"
   "libkissfft.a"
   "libkissfft.pdb"
 )

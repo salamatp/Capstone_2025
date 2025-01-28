@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c" "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o" "gcc" "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o.d"
+  "/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c" "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o" "gcc" "CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o.d"
   )
 
 # Targets to which this target links.
