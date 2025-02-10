@@ -1,4 +1,4 @@
-CMakeFiles/chordDetect.dir/chordDetect.cpp.o: \
+CMakeFiles/chordDetect_linux.dir/chordDetect.cpp.o: \
  /home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

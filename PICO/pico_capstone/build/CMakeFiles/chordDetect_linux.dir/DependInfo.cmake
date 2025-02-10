@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect.cpp" "CMakeFiles/chordDetect.dir/chordDetect.cpp.o" "gcc" "CMakeFiles/chordDetect.dir/chordDetect.cpp.o.d"
+  "/home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect.cpp" "CMakeFiles/chordDetect_linux.dir/chordDetect.cpp.o" "gcc" "CMakeFiles/chordDetect_linux.dir/chordDetect.cpp.o.d"
   )
 
 # Targets to which this target links.

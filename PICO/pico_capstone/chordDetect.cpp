@@ -1,386 +1,338 @@
-//#include <vector>
+#define PICO_ON_LINUX
+
 #include <iostream>
-//#include <unordered_map>
-//#include <cmath>
-//#include <string>
+#include <cmath>  // For sqrt and other math functions
+
+#ifdef PICO_ON_LINUX
+#include <unistd.h>  // For sleep in Linux
+#include <fstream>  // File stream library
+#else
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/timer.h"
+#endif
+
 #include "kiss_fftr.h"
-#include <cmath> // For sqrt and other math functions
-
 
 /////////////////////////////////////
-#define SAMPLES 128                // Must be a power of 2
-#define SAMPLING_FREQUENCY 1000    // Hz
-#define SPI_PORT spi0              // Use SPI0
-#define SPI_CLK 1 * 1000 * 1000    // 1 MHz SPI clock
-#define SPI_MISO 4                 // GPIO for SPI MISO
-#define SPI_MOSI 3                 // GPIO for SPI MOSI
-#define SPI_SCK 2                  // GPIO for SPI SCK
-#define SPI_CS 5                   // GPIO for SPI CS
+// Hardware Configuration
 /////////////////////////////////////
+#define SAMPLES 128
+#define SAMPLING_FREQUENCY 1000  // Hz
+#define SPI_PORT spi0
+#define SPI_CLK 1 * 1000 * 1000  // 1 MHz SPI clock
+#define SPI_MISO 4
+#define SPI_MOSI 3
+#define SPI_SCK 2
+#define SPI_CS 5
 
-#define N 1024  // Size of the FFT
-#define SAMPLE_RATE 44100  // Sampling rate, for example
+//#define N 1024  // Size of the FFT
+//#define SAMPLE_RATE 44100  // Sampling rate, for example
 
+#ifdef PICO_ON_LINUX
+// Stub functions for Linux (No real SPI or GPIO)
 void spi_init_custom() {
-    printf("Starting SPI initilazation\n");
-    spi_init(SPI_PORT, SPI_CLK); // 1 MHz
-    gpio_set_function(SPI_SCK, GPIO_FUNC_SPI);
-    gpio_set_function(SPI_MOSI, GPIO_FUNC_SPI);
-    gpio_set_function(SPI_MISO, GPIO_FUNC_SPI);
-    gpio_init(SPI_CS);
-    gpio_set_dir(SPI_CS, GPIO_OUT);
-    gpio_put(SPI_CS, 1); // Deselect the chip
-    printf("---------------\n");
-    printf("Initialized SPI\n");
+    std::cout << "SPI initialization (Linux Stub)\n";
+}
+
+
+///////////////////////////////////////////////////////
+// uint16_t read_adc(uint8_t channel) {
+//     return rand() % 1024;  // Simulate ADC values
+// }
+#include <cmath>
+#include <cstdint>
+
+#define TONE_FREQUENCY  987.7666f  // Frequency of the sine wave in Hz
+#define TONE_FREQUENCY2  440.0f  // Frequency of the sine wave in Hz
+#define SAMPLE_RATE     4500.0f // Sampling rate in Hz
+#define ADC_MAX_VALUE   1024    // 10-bit ADC resolution
+
+
+float Normalizer(uint16_t sample) {
+    const float ADC_MAX = 1023.0f;  // Max ADC value
+    float normalized = (2.0f * static_cast<float>(sample) / ADC_MAX) - 1.0f;
+    std::cout <<"LETS PRINT THE NORMALIZED INSIDE NORAMALIZER    " << normalized << '\n';
+    return normalized;
 }
 
 uint16_t read_adc(uint8_t channel) {
-    if (channel > 7) return 0; // MCP3008 supports only 8 channels (0-7)
+    static float t = 0.0f; // Time tracker in seconds
 
-    uint8_t tx_data[3];
-    uint8_t rx_data[3];
+    // Calculate the sine wave value at time t
+    float sample = sin(2 * M_PI * TONE_FREQUENCY * t);
+    sample = sample + sin(2 * M_PI * TONE_FREQUENCY2 * t);
 
-    // Construct the command to send to MCP3008
-    tx_data[0] = 0x01;                                // Start bit
-    tx_data[1] = 0x80 | (channel << 4);               // Single-ended mode + channel (high 3 bits)
-    tx_data[2] = 0x00;                                // Dummy byte for clocking out the result
+    // Normalize sine wave from [-1, 1] to [0, 1]
+    sample = (sample + 1.0f) / 2.0f;
+    std::cout <<"SAMPLEEEE    " << sample << "\n";
 
-    gpio_put(SPI_CS, 0); // Select the chip
-    spi_write_read_blocking(SPI_PORT, tx_data, rx_data, 3);
-    gpio_put(SPI_CS, 1); // Deselect the chip
+    // Scale to ADC range [0, ADC_MAX_VALUE]
+    uint16_t adc_value = static_cast<uint16_t>(sample * ADC_MAX_VALUE);
+    std::cout <<"ADC VALUEEEEE    " << adc_value << "\n";
 
-    // Combine the result from rx_data (10-bit result is in bits 1-10 of the response)
-    uint16_t result_int = ((rx_data[1] & 0x03) << 8) | rx_data[2];
-    uint16_t result_final = result_int >> 2;
-    uint8_t result = result_final;
-    // printf("result_int: %d\n",   result_int); 
-    // printf("result_final: %d\n", result_final); 
-    // printf("result: %d\n",       result);  
-    return result_int;
+    // Advance time by one sample interval
+    t += 1.0f / SAMPLE_RATE;
+    return adc_value;
 }
+///////////////////////////////////////////
 
 
-void capture_audio(uint16_t num_samples, uint16_t sampling_rate, uint16_t* samples) {
-    printf("Starting audio capture\n");
-    // Record the start time for the capture
-    uint32_t start_time = time_us_32();  // Start time in seconds
-    
-    uint32_t interval_us = 1000000/sampling_rate; //the interval for each sample
-    uint32_t target_time;
-    uint32_t current_time;
-    uint32_t elapsed_time;
-    uint32_t sleep_time;
-
-    for(uint16_t i = 0; i < num_samples; i++ ){
-      // Record the current time before taking a sample
-      uint32_t current_time = time_us_32();
-      uint32_t elapsed_time = current_time - start_time;
-
-      // Read from the ADC (this step will take some time, but we account for it below)
-      samples[i] = read_adc(0);  // Read from channel 0 (ADC)
-      
-      // Calculate the elapsed time since the start of the capture
-      elapsed_time = time_us_32() - start_time;
-
-      // Calculate when the next sample should be taken
-      target_time = (i + 1) * interval_us + start_time;
-
-      // Calculate the remaining time until the target time
-      sleep_time = target_time - time_us_32();
-
-      // If there's still time left until the next sample, sleep for the remaining time
-      if (sleep_time > 0) sleep_us(sleep_time);
+void sleep_ms(int ms) { usleep(ms * 1000); }
+void sleep_us(int us) { usleep(us); }
+#else
+    // Actual SPI Initialization for Pico
+    void spi_init_custom() {
+        printf("Starting SPI initialization\n");
+        spi_init(SPI_PORT, SPI_CLK);
+        gpio_set_function(SPI_SCK, GPIO_FUNC_SPI);
+        gpio_set_function(SPI_MOSI, GPIO_FUNC_SPI);
+        gpio_set_function(SPI_MISO, GPIO_FUNC_SPI);
+        gpio_init(SPI_CS);
+        gpio_set_dir(SPI_CS, GPIO_OUT);
+        gpio_put(SPI_CS, 1);  // Deselect the chip
+        printf("SPI Initialized\n");
     }
+    uint16_t read_adc(uint8_t channel) {
+        if (channel > 7) return 0;
+        uint8_t tx_data[3] = {0x01, (uint8_t)(0x80 | (channel << 4)), 0x00};
+        uint8_t rx_data[3] = {0};
+
+        gpio_put(SPI_CS, 0);
+        spi_write_read_blocking(SPI_PORT, tx_data, rx_data, 3);
+        gpio_put(SPI_CS, 1);
+
+        uint16_t result = ((rx_data[1] & 0x03) << 8) | rx_data[2];
+        printf("ADC Value: %d\n", result);
+        return result;
+    }
+#endif
+
+// Capture audio samples (Pico & Linux compatible)
+void capture_audio(uint16_t num_samples, uint16_t sampling_rate, float* samples) {
+    uint32_t start_time = 0;
+#ifdef PICO_ON_LINUX
+    std::cout << "Capturing simulated audio on Linux\n";
+    start_time = 0;
+    std::ofstream file_sin("sine_wave.csv"); 
+#else
+    start_time = time_us_32();
+#endif
+
     
-    printf("End of audio capture\n");
+
+    uint32_t interval_us = 1000000 / sampling_rate;
+    for (uint16_t i = 0; i < num_samples; i++) {
+        samples[i] = Normalizer(read_adc(0));  // Read from ADC (real or simulated)
+        printf("Sample %d: %f\n", i, samples[i]);
+        #ifdef PICO_ON_LINUX
+        file_sin << samples[i] << ",";
+        std::cout <<"Normalized ADC VALUEEEEE    " << samples[i] << "\n";
+        std::cout <<"==========================================="<< "\n";
+        #endif
+        uint32_t target_time = start_time + (i + 1) * interval_us;
+    #ifdef PICO_ON_LINUX
+            usleep(interval_us);
+    #else
+            while (time_us_32() < target_time) {}  // Busy-wait to maintain timing
+    #endif
+        }
+
+    #ifdef PICO_ON_LINUX
+    file_sin.close();
+    #endif
 }
 
-
-///KISSFFT////////////////////////////////////////////////////////////////////////////
-
-void fft(uint16_t* input, kiss_fft_cpx* fft_out, uint16_t num_samples, float sampling_rate, float* magnitudes, float* frequencies, kiss_fftr_cfg cfg ) {
-    // Convert uint16_t input to float
+// FFT Function (Works on both Pico & Linux)
+void fft(float* input, kiss_fft_cpx* fft_out, uint16_t num_samples, float sampling_rate, float* magnitudes, float* frequencies, kiss_fftr_cfg cfg) {
     float* input_data = new float[num_samples];
     for (size_t i = 0; i < num_samples; i++) {
         input_data[i] = static_cast<float>(input[i]);
     }
 
-    // Perform the FFT
     kiss_fftr(cfg, input_data, fft_out);
 
-    // Calculate magnitudes and frequencies for each FFT bin
     for (size_t i = 0; i < num_samples / 2 + 1; i++) {
-        // Magnitude is the square root of the sum of squares of the real and imaginary parts
-        magnitudes[i] = std::sqrt(fft_out[i].r * fft_out[i].r + fft_out[i].i * fft_out[i].i);
-        
-        // Frequency corresponding to this bin
+        magnitudes[i] = sqrt(fft_out[i].r * fft_out[i].r + fft_out[i].i * fft_out[i].i);
         frequencies[i] = i * sampling_rate / num_samples;
     }
 
-    // Clean up
     delete[] input_data;
-    delete[] fft_out;
+}
+
+// the frequency is in Hz    
+// Map frequency to musical note
+uint8_t frequency_2_note(float frequency){
+    // Reference: A4 = 440 Hz
+    float A4_freq = 440.0;
+    u_int8_t A4_note = 69;  // MIDI number for A4
+
+    // Calculate the closest MIDI number
+    if( frequency <= 0){
+        return 0;
+    }
+    uint8_t midi_number = (std::round(12 * std::log2(frequency / A4_freq) + A4_note));
+    std::cout << "MIDI NUMBER: " << (int)midi_number << "\n";
+    // Map MIDI number to note names
+    uint8_t note_index =  (midi_number) % 12;  // Modulo 12 for the note names
+    std::cout << "NOTE INDEX: " << (int)note_index << "\n";
+    return note_index;
+}
+
+
+uint16_t freq_detect(float* freqs,float* fft_magnitudes, uint16_t threshold, uint16_t size){
+    // {'C' : 0, 'C#' : 0, 'D' : 0, 'D#' : 0, 'E' : 0, 'F' : 0, 'F#' : 0, 'G' : 0, 'G#' : 0, 'A' : 0, 'A#' : 0, 'B' : 0}
+    uint16_t notes = 0;
+    std::cout << "SIZE OF FREQS " << size << "\n";
+    uint8_t note = 0;
+    for (int i = 0; i < size; i++){
+        // std::cout << (fft_magnitudes[i] >= threshold) << "\n";
+        if(fft_magnitudes[i] >= threshold){
+            std::cout << "FOUND A NOTE" << freqs[i] <<"\n";
+            note = frequency_2_note(freqs[i]);
+            switch(note) {
+                case 0:
+                  // C
+                    notes |= 1 << 0;
+                    std::cout << "C" << "\n";
+                  break;
+                case 1:
+                  // C#
+                    notes |= 1 << 1;
+                    std::cout << "C#" << "\n";
+                  break;
+                case 2:
+                  // 'D'
+                    notes |= 1 << 2;
+                    std::cout << "D" << "\n";
+                  break;
+                case 3:
+                  // 'D#'
+                    notes |= 1 << 3;
+                    std::cout << "D#" << "\n";
+                  break;
+                case 4:
+                  // 'E'
+                    notes |= 1 << 4;
+                    std::cout << "E" << "\n";
+                  break;
+                case 5:
+                  // 'F'
+                    notes |= 1 << 5;
+                    std::cout << "F" << "\n";
+                  break;
+                case 6:
+                  // 'F#'
+                    notes |= 1 << 6;
+                    std::cout << "F#" << "\n";
+                  break;
+                case 7:
+                  // 'G'
+                    notes |= 1 << 7;
+                    std::cout << "G" << "\n";
+                  break;
+                case 8:
+                  // 'G#'
+                    notes |= 1 << 8;
+                    std::cout << "G#" << "\n";
+                  break;
+                case 9:
+                  //A
+                    notes |= 1 << 9;
+                    std::cout << "A" << "\n";
+                    std::cout << "NOTES: " << notes << "\n";
+                  break;
+                case 10:
+                  //A#
+                    notes |= 1 << 10;
+                    std::cout << "A#" << "\n";
+                  break;
+                case 11:
+                  //B
+                    notes |= 1 << 11;
+                    std::cout << "B" << "\n";
+                  break;
+              }
+        }
+    }
+    return notes;
 
 }
-///KISSFFT////////////////////////////////////////////////////////////////////////////
 
 
 void run() {
-  printf("Lets start");
-  stdio_init_all();
-  spi_init_custom();
+    printf("Initializing...\n");
+    spi_init_custom();
 
-  uint16_t sampling_rate = 9000;
-  float sampling_rate_us = (float)(sampling_rate) / 1000000.0; // in us
-  int duration = 1e6; // in us
-  uint16_t num_samples = (uint16_t)(duration * sampling_rate_us);
-  uint16_t samples[num_samples];
-  
-  printf("sampling rate: %u Hz\n", sampling_rate); // 9000 
-  printf("sampling_rate_us rate: %f\n", sampling_rate_us); //0.009
-  printf("duration: %d\n", duration); //10000000
-  printf("num_samples =%u\n", num_samples); //0.00000z
-  
-  //capture input audio samples
-  capture_audio(num_samples, sampling_rate, samples);
+    uint16_t sampling_rate = 4500;
+    uint32_t duration = 333000; // 0.04s second in microseconds (40 ms for 9000 Hz)
+    uint32_t num_samples = duration / (1000000 / sampling_rate); // 360 samples -> resolution = sampling rate (in Hz)/FFT size = 25 Hz
 
-  kiss_fftr_cfg cfg = kiss_fftr_alloc(num_samples, 0, nullptr, nullptr);  // 0 means forward FFT
-  kiss_fft_cpx* fft_out = new kiss_fft_cpx[num_samples / 2 + 1];
+    printf("Sampling Rate: %u Hz\n", sampling_rate);
+    printf("Duration: %u us\n", duration);
+    printf("Number of Samples: %u\n", num_samples);
 
-  ////////////////////////////FFT/////////////////////////////////////////////
-  // Prepare arrays for FFT results
-  float* magnitudes = new float[num_samples / 2 + 1];
-  float* frequencies = new float[num_samples / 2 + 1];
+    float* samples = new float[num_samples];
 
-  // Perform FFT
-  fft(samples, fft_out, num_samples, sampling_rate, magnitudes, frequencies, cfg);
+    capture_audio(num_samples, sampling_rate, samples);
 
-  // Printing the magnitudes and corresponding frequencies
-  printf("FFT Results:\n");
-  for (size_t i = 0; i < num_samples / 2 + 1; i++) {
-      printf("Frequency: %.2f Hz, Magnitude: %.2f\n", frequencies[i], magnitudes[i]);
-  }
-  // Clean up
-  delete[] magnitudes;
-  delete[] frequencies;
-  ////////////////////////////FFT/////////////////////////////////////////////
-  printf("Done.\n");
-  kiss_fftr_free(cfg);
+    kiss_fftr_cfg cfg = kiss_fftr_alloc(num_samples, 0, nullptr, nullptr);
+    kiss_fft_cpx* fft_out = new kiss_fft_cpx[num_samples / 2 + 1];
 
-/* 
-for(uint8_t i = 0; i < 50; i++){
-  printf("ADC Value: %d\n", samples[i]);
-}*/
- 
+    float* magnitudes = new float[num_samples / 2 + 1];
+    float* frequencies = new float[num_samples / 2 + 1];
+
+    fft(samples, fft_out, num_samples, sampling_rate, magnitudes, frequencies, cfg);
+
+    #ifdef PICO_ON_LINUX
+    std::ofstream file_freq("file_freq.csv"); 
+    std::ofstream file_mag("file_mag.csv");
+    #endif
+    printf("FFT Results:\n");
+    for (uint32_t i = 0; i < num_samples / 2 + 1; i++) {
+        printf("Frequency: %.2f Hz, Magnitude: %.2f\n", frequencies[i], magnitudes[i]);
+        #ifdef PICO_ON_LINUX
+        file_freq << frequencies[i] << ",";
+        file_mag << magnitudes[i] << ",";
+        #endif
+    }
+    uint16_t note_index = freq_detect(frequencies, magnitudes, 500, num_samples / 2);
+    printf("Notes detected: %d\n", note_index);
+    
+    
+    // delete[] samples;
+    // delete[] fft_out;
+    // delete[] magnitudes;
+    // delete[] frequencies;
+
+    printf("Done.\n");
+    kiss_fftr_free(cfg);
+    
+    #ifdef PICO_ON_LINUX
+    file_freq.close();
+    file_mag.close();
+   
+    #endif
 }
 
+int main() {
+    #ifdef PICO_ON_LINUX
+        std::cout << "Running on Linux\n";
+    #else
+        stdio_init_all();
+        sleep_ms(2000);
+    #endif
+
+    // int count = 0;
+    // while (true) {
+    //     printf("Running iteration %d...\n", count);
+        run();
+    //     printf("=====================================\n");
+    //     sleep_ms(5000);
+    //     count++;
+    //     if (count > 5) break;
+    // }
 
 
-int main(){
-    spi_init_custom();
-    stdio_init_all();
-    
-    while (true) {
-         run();
-         printf("=====================================\n");
-         sleep_ms(5000);
-    }
-    
     return 0;
 }
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ArduinoFFT<double> FFT = ArduinoFFT<double>();
-
-// unsigned int sampling_period_us;
-// unsigned long microseconds;
-
-// double vReal[SAMPLES];
-// double vImag[SAMPLES];
-
-// float log2(float x){ 
-//   return log(x)/log(2);
-// }
-// put function declarations here:
-// int readADC(int channel) {
-//   if (channel < 0 || channel > 7) {
-//     return -1; // Invalid channel
-//   }
-
-//   digitalWrite(slaveSelect, LOW);  // Start communication
-
-//   // Send the command to the MCP3008
-//   byte command = 0b00000001;                      // Start bit
-//   byte highByte = 0b10000000 | (channel << 4);    // get the channel number, 1 is for serial
-
-//   SPI.transfer(command);          // Send start bit
-//   byte resultHigh = SPI.transfer(highByte);       // Send channel and get MSB (2bits)
-//   byte resultLow = SPI.transfer(0x00);           // Get LSB
-
-//   //Serial.print(resultHigh, BIN);
-//   //Serial.println(resultLow, BIN);
-
-//   digitalWrite(slaveSelect, HIGH);
-
-//   // Combine the MSB and LSB
-//   int result = ((resultHigh & 0x03) << 8) | resultLow;
-
-//   return result;
-// }
-
-// void doFFT(Vector<float> &freqs, Vector<float> &fft_mags) {
-//   //Test the board
-//   //digitalWrite(onboard, LOW);
-//   //delay(1000);
-//   //digitalWrite(onboard, HIGH);
-//   //delay(1000);
-//   //Serial.println("done");
-
-//   //test the SPI
-
-//   int i = 0;
-//   for (int i = 0; i < SAMPLES; i++) {
-//     microseconds = micros();    //Overflows after around 70 minutes!
-//     int channel = 0; // Read from channel 0
-//     int analogValue = readADC(channel);
-//     //Serial.print("Analog Value: ");
-//     //Serial.println(analogValue);
-//     int mic_out = analogRead(mic_pin);
-//     //Serial.print("Direct Mic Value: ");
-//     //Serial.println(mic_out);
-//     //stor value for fft
-//     vReal[i] = analogValue;
-//     vImag[i] = 0.0;
-//     //wait for next sample
-//     while (micros() < (microseconds + sampling_period_us)) {
-//     }
-//   }
-//   // Perform FFT on the collected chunk
-//   FFT.windowing(vReal, SAMPLES, FFT_WIN_TYP_HAMMING, FFT_FORWARD);
-//   FFT.compute(vReal, vImag, SAMPLES, FFT_FORWARD);
-//   FFT.complexToMagnitude(vReal, vImag, SAMPLES);
-//   double peak = FFT.majorPeak(vReal, SAMPLES, SAMPLING_FREQUENCY);
-
-//   /*PRINT RESULTS*/
-//   //Serial.print("Freq: ");
-//   //Serial.println(peak);     //Print out what frequency is the most dominant.
-//   // Print FFT results for this chunk
-//   for (int i = 0; i < (SAMPLES / 2); i++)
-//   {
-//     /*View all these three lines in serial terminal to see which frequencies has which amplitudes*/
-//     float frequency = (i * 1.0 * SAMPLING_FREQUENCY) / SAMPLES;
-//     //Serial.print((i * 1.0 * SAMPLING_FREQUENCY) / SAMPLES, 1);
-//     //Serial.print("-");
-//     //Serial.println(vReal[i]);    //View only this line in serial plotter to visualize the bins
-//     freqs.push_back(frequency);
-//     fft_mags.push_back(vReal[i]);
-//   }
-
-
-//   Serial.print("Done");
-//   //while(1); //stop record for 5sec
-
-//   //float voltage = mic_out * (4.9 / 1024.0); // Convert to voltage (assuming 5V reference)
-//   //Serial.println(voltage);
-
-//   //Serial.println(analogValue, BIN);
-// }
-// String frequency_2_note(float frequency)
-//     {
-//     // Reference: A4 = 440 Hz
-//     float A4_freq = 440.0;
-//     int A4_note = 69;  // MIDI number for A4
-
-//     // Calculate the closest MIDI number
-//     if (frequency <= 0.0)
-//         return "Unknown";
-//     int midi_number = (int)(round(12 * log2(frequency / A4_freq) + A4_note));
-
-//     // Map MIDI number to note names
-//     String note_names[12] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
-//     uint8_t note_index = (midi_number) % 12; // Modulo 12 for the note names
-//     String note = note_names[note_index];
-//     return note;
-// }
-
-// UnorderedMap<String, int> freq_detect(Vector<float> freqs, Vector<float> fft_magnitudes, float threshold)
-// {
-//   UnorderedMap<String, int> notes;
-//   notes["C"] = 0;
-//   notes["C#"] = 0;
-//   notes["D"] = 0;
-//   notes["D#"] = 0;
-//   notes["E"] = 0;
-//   notes["F"] = 0;
-//   notes["F#"] = 0;
-//   notes["G"] = 0;
-//   notes["G#"] = 0;
-//   notes["A"] = 0;
-//   notes["A#"] = 0;
-//   notes["B"] = 0;
-//   String note;
-//   for ( int i = 0; i < freqs.size(); i++) {
-//     Serial.print(fft_magnitudes[i], freqs[i]);
-//     if (fft_magnitudes[i] >= threshold) {
-//       note = frequency_2_note(freqs[i]);
-//       if (notes[note] == 0) {
-//         notes[note] = 1;
-//       }
-//     }
-//   }
-//   return notes;
-// }
-// int main() {
-//   init();
-//   // put your setup code here, to run once:
-//   //Test the board
-//   //pinMode(onboard, OUTPUT);
-//   //Serial.begin(9600);
-
-//   //test the SPI
-//   Serial.begin(115200);
-//   pinMode(slaveSelect, OUTPUT);
-//   digitalWrite(slaveSelect, HIGH);  // Set CS high to deselect the MCP3008
-
-//   SPI.begin();                 // Initialize SPI
-//   SPI.setClockDivider(SPI_CLOCK_DIV16); // Set SPI clock (1 MHz)
-//   SPI.setDataMode(SPI_MODE0);   // MCP3008 uses SPI Mode 0
-//   SPI.setBitOrder(MSBFIRST);    // Send data Most Significant Bit first
-
-//   Serial.println("Start Record");
-//   sampling_period_us = round(1000000 * (1.0 / SAMPLING_FREQUENCY));
-//   while (true) {
-//     Vector<float> freqs;
-//     Vector<float> fft_mags;
-//     doFFT(freqs, fft_mags);
-    
-//     UnorderedMap<String, int> chord_detect = freq_detect(freqs, fft_mags, 1000);
-//     /*
-//     Serial.print("HIIIII");
-//     for (auto it = chord_detect.begin(); it != chord_detect.end(); ++it) {
-//         Serial.print("Key: ");
-//         Serial.print((*it).key); // Access the key
-//         Serial.print(", Value: ");
-//         Serial.println((*it).value); // Access the value
-//     }
-//     */
-    
-//     break;
-//   }
-//   return 0;
-// }
-
-
-// #define onboard 5
-// #define slaveSelect 10 //none-sec pin which select ADC
-// #define mic_pin A5
-// #define SAMPLES 128              //Must be a power of 2
-// #define SAMPLING_FREQUENCY 1000 //Hz, must be less than 10000 due to ADC
-
-
-
-/////  GLOBAL VARIABLES /////////

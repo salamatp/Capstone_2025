@@ -1,5 +1,0 @@
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool/picotool
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool/picotoolTargets.cmake
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool/picotoolTargets-release.cmake
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool/picotoolConfig.cmake
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/_deps/picotool/picotoolConfigVersion.cmake
