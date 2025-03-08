@@ -6,13 +6,17 @@
                 "${workspaceFolder}/**",
                 "/home/arnur/Capstone_2025/PICO/Libraries/CMSIS_5/**",
                 "/home/arnur/Capstone_2025/PICO/Libraries/pico-sdk/**",
-                "/home/arnur/Capstone_2025/PICO/Libraries/**"
+                "/home/arnur/Capstone_2025/PICO/Libraries/**",
+                "/home/arnur/Capstone_2025/PICO/pico_capstone/lib/include/**",
+                "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/**",
+                "//home/arnur/Capstone_2025/PICO/pico-sdk/src/**"
             ],
             "defines": [],
             "cStandard": "c17",
             "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64",
-            "compilerPath": "/usr/bin/gcc"
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

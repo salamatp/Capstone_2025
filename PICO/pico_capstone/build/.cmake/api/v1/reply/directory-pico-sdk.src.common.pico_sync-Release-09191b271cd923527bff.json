@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "pico-sdk/src/common/pico_sync",
+		"source" : "/home/arnur/Capstone_2025/PICO/pico-sdk/src/common/pico_sync"
+	}
+}

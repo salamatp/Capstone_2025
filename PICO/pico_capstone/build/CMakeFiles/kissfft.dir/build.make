@@ -73,29 +73,29 @@ CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o: /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o: CMakeFiles/kissfft.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o -MF CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o.d -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o -c /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o -MF CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o.d -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.o -c /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c
 
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c > CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c > CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.i
 
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fft.c.s
 
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o: CMakeFiles/kissfft.dir/flags.make
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o: /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o: CMakeFiles/kissfft.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o -MF CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o.d -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o -c /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o -MF CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o.d -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.o -c /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c
 
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c > CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c > CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.i
 
 CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c -o CMakeFiles/kissfft.dir/home/arnur/Capstone_2025/PICO/Libraries/kissfft/kiss_fftr.c.s
 
 # Object files for target kissfft
 kissfft_OBJECTS = \

@@ -1,0 +1,42 @@
+cmake_minimum_required(VERSION 3.12)
+
+# Initialize the project
+project(16x2_display C CXX ASM)
+
+# Set the path to the Pico SDK
+set(PICO_SDK_PATH /home/arnur/Capstone_2025/PICO/pico-sdk)
+
+# Include the Pico SDK (this must be done before any Pico-specific commands)
+include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+
+# Initialize the Pico SDK
+pico_sdk_init()
+
+# Add the executable
+add_executable(16x2_display LCD_I2C.cpp)
+
+# Set compiler and linker flags for Cortex-M0+
+set(CMAKE_C_FLAGS "-mcpu=cortex-m0plus -mthumb -specs=nosys.specs" CACHE STRING "C Compiler Flags")
+set(CMAKE_CXX_FLAGS "-mcpu=cortex-m0plus -mthumb -specs=nosys.specs" CACHE STRING "C++ Compiler Flags")
+set(CMAKE_ASM_FLAGS "-mcpu=cortex-m0plus -mthumb -specs=nosys.specs" CACHE STRING "ASM Compiler Flags")
+set(CMAKE_EXE_LINKER_FLAGS "-specs=nosys.specs" CACHE STRING "Linker Flags")
+
+# Disable serial
+pico_enable_stdio_uart(16x2_display 0)
+pico_enable_stdio_usb(16x2_display 0)
+
+# Add the libraries to the build
+target_link_libraries(16x2_display pico_stdlib hardware_i2c)
+
+# Set the linker script to avoid default exit() dependencies
+pico_set_linker_script(16x2_display ${PICO_SDK_PATH}/src/rp2_common/pico_standard_link/memmap_default.ld)
+
+# Add pico extras
+pico_add_extra_outputs(16x2_display)
+
+# Set float and double implementation
+pico_set_float_implementation(16x2_display pico)
+pico_set_double_implementation(16x2_display pico)
+
+# Include directories (if needed)
+# target_include_directories(16x2_display PRIVATE path_to_your_include_files)

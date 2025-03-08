@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "pico-sdk/docs",
+		"source" : "/home/arnur/Capstone_2025/PICO/pico-sdk/docs"
+	}
+}
