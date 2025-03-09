@@ -249,8 +249,8 @@ void run() {
     spi_init_custom();
 
     uint16_t sampling_rate = 4500;
-    // uint32_t duration = 333000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
-    uint32_t duration = 33300000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
+    uint32_t duration = 333000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
+    //uint32_t duration = 33300000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
     uint32_t num_samples = duration / (1000000 / sampling_rate); // 360 samples -> resolution = sampling rate (in Hz)/FFT size = 25 Hz
 
     printf("Sampling Rate: %u Hz\n", sampling_rate);
@@ -264,17 +264,12 @@ void run() {
 
     float* samples = new float[num_samples];
     while (true){
-        std::cout << "============================================================\n";
+      printf("New Iteration Started\n");
         // std::cout << "num_samples= " << num_samples <<"sampling rate= "<< sampling_rate <<"\n";
-        capture_audio(num_samples, sampling_rate, samples);
-
-
-        fft(samples, fft_out, num_samples, sampling_rate, magnitudes, frequencies, cfg);
-
-  
-        uint16_t note_index = freq_detect(frequencies, magnitudes, 500, num_samples / 2);
+      capture_audio(num_samples, sampling_rate, samples);
+      fft(samples, fft_out, num_samples, sampling_rate, magnitudes, frequencies, cfg);
+      uint16_t note_index = freq_detect(frequencies, magnitudes, 500, num_samples / 2);
         // printf("Notes detected: %d\n", note_index);
-        std::cout << "============================================================\n";
     }
     
     // delete[] samples;

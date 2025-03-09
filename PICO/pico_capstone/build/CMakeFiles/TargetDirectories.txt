@@ -1,7 +1,5 @@
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/kissfft.dir
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/chordDetect.dir
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/picotoolForceReconfigure.dir
-/home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/picotoolBuild.dir
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/edit_cache.dir
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/CMakeFiles/rebuild_cache.dir
 /home/arnur/Capstone_2025/PICO/pico_capstone/build/pico-sdk/CMakeFiles/edit_cache.dir
