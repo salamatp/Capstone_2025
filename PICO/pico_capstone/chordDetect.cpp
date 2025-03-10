@@ -27,7 +27,7 @@
 //#define N 1024  // Size of the FFT
 //#define SAMPLE_RATE 44100  // Sampling rate, for example
 
-
+// this function normalized the 10 bit ADC value between -1 to 1:
 float Normalizer(uint16_t sample) {
     const float ADC_MAX = 1023.0f;  // Max ADC value
     float normalized = (2.0f * static_cast<float>(sample) / ADC_MAX) - 1.0f;
@@ -123,6 +123,55 @@ void capture_audio(uint16_t num_samples, uint16_t sampling_rate, float* samples)
     }
 
 }
+// void capture_audio_test(uint16_t num_samples, uint16_t sampling_rate) {
+//     spi_init_custom();
+//     uint32_t start_time = 0;
+
+//     start_time = time_us_32();
+
+//     uint32_t interval_us = 1000000 / sampling_rate;
+//     for (uint16_t i = 0; i < num_samples; i++) {
+//         std::cout << read_adc(0) << "\n";  // Read from ADC (real or simulated)
+//         uint32_t target_time = start_time + (i + 1) * interval_us;
+//         while (time_us_32() < target_time) {}  // Busy-wait to maintain timing
+//     }
+
+// }
+
+void capture_audio_test(uint16_t num_samples, uint16_t sampling_rate) {
+  spi_init_custom();
+  
+  // Record the start time (in microseconds)
+  uint32_t start_time = time_us_32();
+  // Calculate the desired interval between samples in microseconds
+  uint32_t interval_us = 1000000 / sampling_rate;
+  
+  // Capture and print samples
+  for (uint16_t i = 0; i < num_samples; i++) {
+      // Read from ADC and print the sample
+      printf("%d\n", read_adc(0));
+      
+      // Compute target time for the next sample
+      uint32_t target_time = start_time + (i + 1) * interval_us;
+      int32_t remaining_time = target_time - time_us_32();
+      
+      // Sleep for the remaining time if needed
+      if (remaining_time > 0) {
+          sleep_us(remaining_time);
+      }
+  }
+  
+  // Compute the actual elapsed time and sampling rate
+  uint32_t end_time = time_us_32();
+  float duration_sec = (end_time - start_time) / 1000000.0f;
+  float actual_sampling_rate = num_samples / duration_sec;
+  
+  // Print both the expected and the actual sampling rate
+  printf("Expected Sampling Rate: %d Hz\n", sampling_rate);
+  printf("Actual Sampling Rate: %.2f Hz\n", actual_sampling_rate);
+}
+
+
 
 // FFT Function (Works on both Pico & Linux)
 void fft(float* input, kiss_fft_cpx* fft_out, uint16_t num_samples, float sampling_rate, float* magnitudes, float* frequencies, kiss_fftr_cfg cfg) {
@@ -247,7 +296,7 @@ uint16_t freq_detect(float* freqs,float* fft_magnitudes, uint16_t threshold, uin
 void run() {
     printf("Initializing...\n");
     spi_init_custom();
-
+    
     uint16_t sampling_rate = 4500;
     uint32_t duration = 333000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
     //uint32_t duration = 33300000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
@@ -293,17 +342,24 @@ int main() {
     stdio_init_all();
     sleep_ms(2000);
     //#endif
-
+    uint32_t num_samples = 22500;
+    uint16_t sampling_rate = 4500;
     // int count = 0;
     // while (true) {
     //     printf("Running iteration %d...\n", count);
-    run();
+    
+    
+    while(true){
+
+      capture_audio_test(num_samples,sampling_rate);
+    }
+    
+    
+    //run();
     //     printf("=====================================\n");
     //     sleep_ms(5000);
     //     count++;
     //     if (count > 5) break;
     // }
-
-
     return 0;
 }
