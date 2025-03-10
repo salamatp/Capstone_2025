@@ -117,7 +117,7 @@ void capture_audio(uint16_t num_samples, uint16_t sampling_rate, float* samples)
     uint32_t interval_us = 1000000 / sampling_rate;
     for (uint16_t i = 0; i < num_samples; i++) {
         samples[i] = Normalizer(read_adc(0));  // Read from ADC (real or simulated)
-        std::cout << samples[i] << "\n";
+        //std::cout << samples[i] << "\n";
         uint32_t target_time = start_time + (i + 1) * interval_us;
         while (time_us_32() < target_time) {}  // Busy-wait to maintain timing
     }
@@ -135,12 +135,10 @@ void capture_audio(uint16_t num_samples, uint16_t sampling_rate, float* samples)
 //         uint32_t target_time = start_time + (i + 1) * interval_us;
 //         while (time_us_32() < target_time) {}  // Busy-wait to maintain timing
 //     }
-
 // }
 
-void capture_audio_test(uint16_t num_samples, uint16_t sampling_rate) {
-  spi_init_custom();
-  
+void capture_audio_test(uint16_t num_samples, uint16_t sampling_rate,  float* samples) {
+
   // Record the start time (in microseconds)
   uint32_t start_time = time_us_32();
   // Calculate the desired interval between samples in microseconds
@@ -149,7 +147,7 @@ void capture_audio_test(uint16_t num_samples, uint16_t sampling_rate) {
   // Capture and print samples
   for (uint16_t i = 0; i < num_samples; i++) {
       // Read from ADC and print the sample
-      printf("%d\n", read_adc(0));
+      samples[i] = Normalizer(read_adc(0));  // Read from ADC (real or simulated)
       
       // Compute target time for the next sample
       uint32_t target_time = start_time + (i + 1) * interval_us;
@@ -167,7 +165,6 @@ void capture_audio_test(uint16_t num_samples, uint16_t sampling_rate) {
   float actual_sampling_rate = num_samples / duration_sec;
   
   // Print both the expected and the actual sampling rate
-  printf("Expected Sampling Rate: %d Hz\n", sampling_rate);
   printf("Actual Sampling Rate: %.2f Hz\n", actual_sampling_rate);
 }
 
@@ -301,10 +298,6 @@ void run() {
     uint32_t duration = 333000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
     //uint32_t duration = 33300000; // 0.04s second in microseconds (40 ms for 9000 Hz) same as block size
     uint32_t num_samples = duration / (1000000 / sampling_rate); // 360 samples -> resolution = sampling rate (in Hz)/FFT size = 25 Hz
-
-    printf("Sampling Rate: %u Hz\n", sampling_rate);
-    printf("Duration: %u us\n", duration);
-    printf("Number of Samples: %u\n", num_samples);
     
     kiss_fftr_cfg cfg = kiss_fftr_alloc(num_samples, 0, nullptr, nullptr);
     kiss_fft_cpx* fft_out = new kiss_fft_cpx[num_samples / 2 + 1];
@@ -313,14 +306,19 @@ void run() {
 
     float* samples = new float[num_samples];
     while (true){
-      printf("New Iteration Started\n");
+      printf("===================================\n");
         // std::cout << "num_samples= " << num_samples <<"sampling rate= "<< sampling_rate <<"\n";
-      capture_audio(num_samples, sampling_rate, samples);
+      capture_audio_test(num_samples, sampling_rate, samples);
       fft(samples, fft_out, num_samples, sampling_rate, magnitudes, frequencies, cfg);
-      uint16_t note_index = freq_detect(frequencies, magnitudes, 500, num_samples / 2);
-        // printf("Notes detected: %d\n", note_index);
+      uint16_t note_index = freq_detect(frequencies, magnitudes, 40, num_samples / 2);
+      for (int i = 0; i < num_samples; i++){
+          printf("frequency: %f, magnitude: %f \n ", frequencies[i], magnitudes[i]);
+      }
+
+      printf("Notes detected: %d\n", note_index);
     }
-    
+      
+   
     // delete[] samples;
     // delete[] fft_out;
     // delete[] magnitudes;
@@ -336,30 +334,11 @@ void run() {
 }
 
 int main() {
-    // #ifdef PICO_ON_LINUX
-    //     std::cout << "Running on Linux\n";
-    // #else
+
     stdio_init_all();
     sleep_ms(2000);
-    //#endif
-    uint32_t num_samples = 22500;
-    uint16_t sampling_rate = 4500;
-    // int count = 0;
-    // while (true) {
-    //     printf("Running iteration %d...\n", count);
     
-    
-    while(true){
+    run();
 
-      capture_audio_test(num_samples,sampling_rate);
-    }
-    
-    
-    //run();
-    //     printf("=====================================\n");
-    //     sleep_ms(5000);
-    //     count++;
-    //     if (count > 5) break;
-    // }
     return 0;
 }
