@@ -21,6 +21,13 @@ set(KISSFFT_SRC
 
 project(capstone_project C CXX ASM) # CXX is for C++
 set(CMAKE_CXX_STANDARD 17) # We are using C++
+# # Set the build type to Release (for optimizations)
+set(CMAKE_BUILD_TYPE Release)
+
+# # # ===========================================
+# # # Set optimization flags for release build
+# # # ===========================================
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=armv6-m -funroll-loops -ftree-vectorize -s")
 
 pico_sdk_init() # Initialize the Pico SDK within the project 
 

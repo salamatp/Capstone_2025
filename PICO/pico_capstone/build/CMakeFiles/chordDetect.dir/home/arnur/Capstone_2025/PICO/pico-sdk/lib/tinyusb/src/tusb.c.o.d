@@ -77,5 +77,4 @@ CMakeFiles/chordDetect.dir/home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/sr
  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
  /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
- /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
- /usr/include/newlib/ctype.h
+ /home/arnur/Capstone_2025/PICO/pico-sdk/lib/tinyusb/src/common/tusb_private.h

@@ -6,5 +6,5 @@ ASM_DEFINES =
 
 ASM_INCLUDES = -I/home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect -I/home/arnur/Capstone_2025/PICO/Libraries/kissfft
 
-ASM_FLAGS = -mcpu=cortex-m0plus -mthumb -Og -g
+ASM_FLAGS = -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG
 

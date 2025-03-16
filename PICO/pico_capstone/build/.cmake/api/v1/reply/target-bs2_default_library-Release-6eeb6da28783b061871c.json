@@ -60,7 +60,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG"
 				}
 			],
 			"includes" : 

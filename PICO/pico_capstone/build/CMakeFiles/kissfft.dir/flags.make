@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/arnur/Capstone_2025/PICO/pico_capstone/chordDetect -I/home/arnur/Capstone_2025/PICO/Libraries/kissfft
 
-C_FLAGS = -mcpu=cortex-m0plus -mthumb -Og -g
+C_FLAGS = -mcpu=cortex-m0plus -mthumb -g -O3 -DNDEBUG
 
