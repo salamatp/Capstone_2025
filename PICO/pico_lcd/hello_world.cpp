@@ -32,15 +32,22 @@ struct st7789_config {
  
 const uint8_t font[36][5] = {
     // A-Z
-    {0x7E, 0x11, 0x11, 0x11, 0x7E}, // A
+   {0x7E, 0x11, 0x11, 0x11, 0x7E}, // A
     {0x7F, 0x49, 0x49, 0x49, 0x36}, // B
     {0x3E, 0x41, 0x41, 0x41, 0x22}, // C
     {0x7F, 0x41, 0x41, 0x22, 0x1C}, // D
     {0x7F, 0x49, 0x49, 0x41, 0x41}, // E
     {0x7F, 0x09, 0x09, 0x01, 0x01},// F
     {0x3E, 0x41, 0x49, 0x49, 0x3A}, // G
+    {0x20, 0x54, 0x54, 0x54, 0x78},// a
     {0x7F, 0x48, 0x44, 0x44, 0x38},// b, need to find out the smaller b bitmap
+    {0x08, 0x14, 0x54, 0x54, 0x3C},// g
+    {0x00, 0x44, 0x7D, 0x40, 0x00},// i
+    {0x20, 0x40, 0x44, 0x3D, 0x00},// j
+    {0x7C, 0x04, 0x18, 0x04, 0x78},// m
+    {0x3C, 0x40, 0x40, 0x20, 0x7C},// u
     {0x14, 0x7F, 0x14, 0x7F, 0x14},// #
+    {0x08, 0x08, 0x08, 0x08, 0x08},// -
 };
 
 static void st7789_cmd(uint8_t cmd, const uint8_t* data, size_t len)
@@ -244,11 +251,31 @@ void st7789_draw_char(uint16_t x, uint16_t y, char c, uint16_t color, uint8_t sc
 
     // Handle special characters # and b
     if (c == '#') {
-        index = 8;  // Font array index for '#'
+        index = 14;  // Font array index for '#'
+    }
+    else if (c == '-') {
+        index = 15; 
+    }
+    else if (c == 'a') {
+        index = 7;  
     }
     else if (c == 'b') {
-        // Handle lowercase 'b' as uppercase 'B' or treat it separately if needed
-        index = 7;  // Font array index for 'B'
+        index = 8;  
+    }
+    else if (c == 'g') {
+        index = 9;  
+    }
+    else if (c == 'i') {
+        index = 10;  
+    }
+    else if (c == 'j') {
+        index = 11;  
+    }
+    else if (c == 'm') {
+        index = 12;  
+    }
+    else if (c == 'u') {
+        index = 13;  
     }
     else if (c >= 'A' && c <= 'Z') {
         // Get the index of the character in the  font array for A-Z
