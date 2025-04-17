@@ -37,11 +37,7 @@ int readADC(int channel) {
   byte resultHigh = SPI.transfer(highByte);       // Send channel and get MSB (2bits)
   byte resultLow = SPI.transfer(0x00);           // Get LSB
 
-  //Serial.print(resultHigh, BIN);
-  //Serial.println(resultLow, BIN);
-
   digitalWrite(slaveSelect, HIGH);
-
   // Combine the MSB and LSB
   int result = ((resultHigh & 0x03) << 8) | resultLow;
 
@@ -49,25 +45,11 @@ int readADC(int channel) {
 }
 
 void doFFT(Vector<float> &freqs, Vector<float> &fft_mags) {
-  //Test the board
-  //digitalWrite(onboard, LOW);
-  //delay(1000);
-  //digitalWrite(onboard, HIGH);
-  //delay(1000);
-  //Serial.println("done");
-
-  //test the SPI
-
   int i = 0;
   for (int i = 0; i < SAMPLES; i++) {
     microseconds = micros();    //Overflows after around 70 minutes!
     int channel = 0; // Read from channel 0
-    int analogValue = readADC(channel);
-    //Serial.print("Analog Value: ");
-    //Serial.println(analogValue);
-    int mic_out = analogRead(mic_pin);
-    //Serial.print("Direct Mic Value: ");
-    //Serial.println(mic_out);
+    int analogValue = readADC(channel); //read the signal 
     //stor value for fft
     vReal[i] = analogValue;
     vImag[i] = 0.0;
